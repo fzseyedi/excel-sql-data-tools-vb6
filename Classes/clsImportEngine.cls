@@ -154,6 +154,7 @@ Private Sub TransferStageToTarget( _
     SafeDatabaseName = BracketName(DatabaseName)
     
     TotalRows = GetStageRowCount(Conn, DatabaseName, SchemaName, StageTableName)
+    
     If TotalRows = 0 Then Exit Sub
     
     SqlText = ""

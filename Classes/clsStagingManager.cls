@@ -68,6 +68,12 @@ Public Function CreateStageTable( _
     End If
     
     SqlText = ""
+    SqlText = SqlText & "IF OBJECT_ID('" & SchemaName & "." & StageName & "', 'U') IS NOT NULL " & vbCrLf
+    SqlText = SqlText & "    DROP TABLE " & SafeDatabaseName & "." & BracketName(SchemaName) & "." & BracketName(StageName)
+
+    Conn.Execute SqlText
+    
+    SqlText = ""
     SqlText = SqlText & "CREATE TABLE " & SafeDatabaseName & "." & BracketName(SchemaName) & "." & BracketName(StageName) & " (" & vbCrLf
     SqlText = SqlText & "    StageRowId INT IDENTITY(1,1) NOT NULL PRIMARY KEY," & vbCrLf
     SqlText = SqlText & ColumnDefs & vbCrLf
@@ -83,7 +89,7 @@ ErrorHandler:
 End Function
 
 Public Sub DropStageTable(ByVal Conn As ADODB.Connection, ByVal DatabaseName As String, ByVal SchemaName As String)
-    On Error Resume Next
+    On Error GoTo ErrorHandler
     
     Dim SqlText As String
     Dim SafeDatabaseName As String
@@ -95,9 +101,12 @@ Public Sub DropStageTable(ByVal Conn As ADODB.Connection, ByVal DatabaseName As 
     SqlText = "DROP TABLE " & SafeDatabaseName & "." & BracketName(SchemaName) & "." & BracketName(mStageTableName)
     Conn.Execute SqlText
     
-    If Err.Number = 0 Then
-        mStageTableName = ""
-    End If
+    mStageTableName = ""
+    Exit Sub
+
+ErrorHandler:
+    Err.Raise vbObjectError + 1310, "clsStagingManager.DropStageTable", _
+              "Failed to drop staging table [" & mStageTableName & "]. " & Err.Description
 End Sub
 
 Public Function InsertRowsIntoStage( _

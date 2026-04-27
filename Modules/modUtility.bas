@@ -69,9 +69,11 @@ Public Function BuildFullTableName(ByVal SchemaName As String, ByVal TableName A
 End Function
 
 Public Function GenerateStageTableName(ByVal TableName As String) As String
+    Randomize
     GenerateStageTableName = DEFAULT_STAGE_PREFIX & _
                              CleanObjectName(TableName) & "_" & _
-                             Format$(Now, "yyyymmdd_hhnnss")
+                             Format$(Now, "yyyymmdd_hhnnss") & "_" & _
+                             CStr(Int((9000 * Rnd) + 1000))
 End Function
 
 Public Function CleanObjectName(ByVal Value As String) As String
@@ -145,4 +147,3 @@ Public Function BoolToText(ByVal Value As Boolean) As String
         BoolToText = "No"
     End If
 End Function
-

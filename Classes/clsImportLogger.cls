@@ -93,3 +93,8 @@ Public Sub FinishLog(ByVal FinalStatus As String)
     WriteInfo "===================================================="
 End Sub
 
+Public Sub ResetCounters()
+    mSuccessCount = 0
+    mSkipCount = 0
+    mErrorCount = 0
+End Sub

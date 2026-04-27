@@ -33,13 +33,13 @@ Begin VB.Form frmImportExcelToSql
       _Version        =   393216
    End
    Begin TabDlg.SSTab sstMain 
-      Height          =   5775
+      Height          =   6615
       Left            =   120
       TabIndex        =   18
-      Top             =   2760
+      Top             =   1560
       Width           =   14655
       _ExtentX        =   25850
-      _ExtentY        =   10186
+      _ExtentY        =   11668
       _Version        =   393216
       Tab             =   2
       TabHeight       =   520
@@ -67,13 +67,13 @@ Begin VB.Form frmImportExcelToSql
       Tab(2).Control(0).Enabled=   0   'False
       Tab(2).ControlCount=   1
       Begin MSFlexGridLib.MSFlexGrid grdExcelPreview 
-         Height          =   1455
+         Height          =   1935
          Left            =   -74880
          TabIndex        =   20
-         Top             =   3840
+         Top             =   4200
          Width           =   14415
          _ExtentX        =   25426
-         _ExtentY        =   2566
+         _ExtentY        =   3413
          _Version        =   393216
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Tahoma"
@@ -90,7 +90,7 @@ Begin VB.Form frmImportExcelToSql
          Left            =   -66840
          Style           =   2  'Dropdown List
          TabIndex        =   57
-         Top             =   5310
+         Top             =   6150
          Visible         =   0   'False
          Width           =   3855
       End
@@ -104,7 +104,7 @@ Begin VB.Form frmImportExcelToSql
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   5295
+         Height          =   6135
          Left            =   120
          TabIndex        =   30
          Top             =   360
@@ -119,7 +119,7 @@ Begin VB.Form frmImportExcelToSql
             Width           =   1590
          End
          Begin VB.TextBox txtStatus 
-            Height          =   1695
+            Height          =   2535
             Left            =   360
             Locked          =   -1  'True
             MultiLine       =   -1  'True
@@ -138,6 +138,7 @@ Begin VB.Form frmImportExcelToSql
             _ExtentY        =   661
             _Version        =   393216
             Appearance      =   1
+            Scrolling       =   1
          End
          Begin VB.CommandButton cmdExit 
             Caption         =   "Exit"
@@ -267,7 +268,7 @@ Begin VB.Form frmImportExcelToSql
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   5295
+         Height          =   6135
          Left            =   -74880
          TabIndex        =   25
          Top             =   360
@@ -320,7 +321,7 @@ Begin VB.Form frmImportExcelToSql
          Height          =   360
          Left            =   -70800
          TabIndex        =   23
-         Top             =   5310
+         Top             =   6150
          Width           =   1830
       End
       Begin VB.CommandButton cmdSaveMapping 
@@ -328,7 +329,7 @@ Begin VB.Form frmImportExcelToSql
          Height          =   360
          Left            =   -68880
          TabIndex        =   24
-         Top             =   5310
+         Top             =   6150
          Width           =   1830
       End
       Begin VB.CommandButton cmdLoadSavedMapping 
@@ -336,7 +337,7 @@ Begin VB.Form frmImportExcelToSql
          Height          =   360
          Left            =   -72960
          TabIndex        =   22
-         Top             =   5310
+         Top             =   6150
          Width           =   2070
       End
       Begin VB.CommandButton cmdAutoMatch 
@@ -344,17 +345,17 @@ Begin VB.Form frmImportExcelToSql
          Height          =   360
          Left            =   -74880
          TabIndex        =   21
-         Top             =   5310
+         Top             =   6150
          Width           =   1830
       End
       Begin MSFlexGridLib.MSFlexGrid grdMapping 
-         Height          =   3135
+         Height          =   3495
          Left            =   -74880
          TabIndex        =   19
          Top             =   480
          Width           =   14415
          _ExtentX        =   25426
-         _ExtentY        =   5530
+         _ExtentY        =   6165
          _Version        =   393216
          ScrollTrack     =   -1  'True
          SelectionMode   =   2
@@ -384,7 +385,7 @@ Begin VB.Form frmImportExcelToSql
          Height          =   195
          Left            =   -74880
          TabIndex        =   60
-         Top             =   3600
+         Top             =   3960
          Width           =   1860
       End
    End
@@ -399,43 +400,43 @@ Begin VB.Form frmImportExcelToSql
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   2535
-      Left            =   10080
+      Height          =   1335
+      Left            =   120
       TabIndex        =   12
       Top             =   120
-      Width           =   4695
+      Width           =   14655
       Begin VB.OptionButton optReadByExcel 
          Caption         =   "Read via Excel Automation"
          Height          =   375
-         Left            =   120
+         Left            =   9720
          TabIndex        =   16
-         Top             =   2040
+         Top             =   600
          Value           =   -1  'True
          Width           =   2655
       End
       Begin VB.OptionButton optReadByAdo 
          Caption         =   "Read via ADO/OLEDB"
          Height          =   375
-         Left            =   120
+         Left            =   7440
          TabIndex        =   15
-         Top             =   1680
+         Top             =   600
          Width           =   2175
       End
       Begin VB.CommandButton cmdLoadExcelColumns 
          Caption         =   "Load Excel Columns"
          Height          =   360
-         Left            =   2760
+         Left            =   12720
          TabIndex        =   17
-         Top             =   2040
+         Top             =   600
          Width           =   1830
       End
       Begin VB.CommandButton cmdBrowseExcel 
          Caption         =   "Browse"
          Height          =   360
-         Left            =   2760
+         Left            =   4440
          TabIndex        =   14
-         Top             =   1200
-         Width           =   1830
+         Top             =   700
+         Width           =   990
       End
       Begin VB.TextBox txtExcelFile 
          BeginProperty Font 
@@ -487,7 +488,8 @@ Begin VB.Form frmImportExcelToSql
       Height          =   2520
       Left            =   5400
       TabIndex        =   6
-      Top             =   120
+      Top             =   -120
+      Visible         =   0   'False
       Width           =   4575
       Begin VB.TextBox txtSearchTable 
          Height          =   375
@@ -582,7 +584,8 @@ Begin VB.Form frmImportExcelToSql
       Height          =   2520
       Left            =   120
       TabIndex        =   36
-      Top             =   120
+      Top             =   -120
+      Visible         =   0   'False
       Width           =   5175
       Begin VB.CheckBox chkRememberConnectionSettings 
          Caption         =   "Remember connection settings"
@@ -672,26 +675,89 @@ Begin VB.Form frmImportExcelToSql
          Width           =   1125
       End
    End
+   Begin VB.Label lblTableInfo 
+      BackColor       =   &H00C0FFFF&
+      BorderStyle     =   1  'Fixed Single
+      Caption         =   "-"
+      ForeColor       =   &H00FF0000&
+      Height          =   345
+      Left            =   10920
+      TabIndex        =   66
+      Top             =   8220
+      Width           =   3855
+   End
+   Begin VB.Label lblTableInfoCaption 
+      AutoSize        =   -1  'True
+      BackStyle       =   0  'Transparent
+      Caption         =   "Table :"
+      Height          =   240
+      Left            =   10200
+      TabIndex        =   65
+      Top             =   8220
+      Width           =   615
+   End
+   Begin VB.Label lblDatabaseInfo 
+      BackColor       =   &H00C0FFFF&
+      BorderStyle     =   1  'Fixed Single
+      Caption         =   "-"
+      ForeColor       =   &H00FF0000&
+      Height          =   345
+      Left            =   6120
+      TabIndex        =   64
+      Top             =   8220
+      Width           =   3855
+   End
+   Begin VB.Label lblDatabaseInfoCaption 
+      AutoSize        =   -1  'True
+      BackStyle       =   0  'Transparent
+      Caption         =   "Database :"
+      Height          =   240
+      Left            =   5040
+      TabIndex        =   63
+      Top             =   8220
+      Width           =   930
+   End
+   Begin VB.Label lblConnectionInfo 
+      BackColor       =   &H00C0FFFF&
+      BorderStyle     =   1  'Fixed Single
+      Caption         =   "-"
+      ForeColor       =   &H00FF0000&
+      Height          =   345
+      Left            =   1080
+      TabIndex        =   62
+      Top             =   8220
+      Width           =   3855
+   End
+   Begin VB.Label lblConnectionInfoCaption 
+      AutoSize        =   -1  'True
+      BackStyle       =   0  'Transparent
+      Caption         =   "Server :"
+      Height          =   240
+      Left            =   120
+      TabIndex        =   61
+      Top             =   8220
+      Width           =   705
+   End
    Begin VB.Label lblGlobalStatus 
       BackColor       =   &H00C0FFFF&
       BorderStyle     =   1  'Fixed Single
       Caption         =   "Ready"
       ForeColor       =   &H00FF0000&
       Height          =   345
-      Left            =   840
+      Left            =   1080
       TabIndex        =   56
       Top             =   8595
-      Width           =   13935
+      Width           =   13695
    End
    Begin VB.Label lblGlobalStatusCaption 
       AutoSize        =   -1  'True
       BackStyle       =   0  'Transparent
-      Caption         =   "Status:"
+      Caption         =   "Status  :"
       Height          =   240
       Left            =   120
       TabIndex        =   55
       Top             =   8595
-      Width           =   615
+      Width           =   735
    End
 End
 Attribute VB_Name = "frmImportExcelToSql"
@@ -704,7 +770,7 @@ Option Explicit
 Private Const SETTINGS_FILE_NAME As String = "AppSettings.ini"
 Private Const SETTINGS_SECTION_CONNECTION As String = "Connection"
 
-Private mSqlConnection As clsSqlServerConnection
+'Private mSqlConnection As clsSqlServerConnection
 Private mDatabaseBrowser As clsDatabaseBrowser
 Private mMappingManager As clsMappingManager
 Private mTargetColumns As Collection
@@ -715,8 +781,8 @@ Private mCurrentGridCol As Long
 Private mImportLogger As clsImportLogger
 Private mStagingManager As clsStagingManager
 Private mImportEngine As clsImportEngine
-Private mAllDatabases As Collection
-Private mAllTables As Collection
+'Private mAllDatabases As Collection
+'Private mAllTables As Collection
 Private mCancelRequested As Boolean
 
 Private Sub cmbGridSqlColumns_Click()
@@ -924,17 +990,39 @@ End Sub
 Private Sub cmdLoadSavedMapping_Click()
     On Error GoTo ErrorHandler
     
+    Dim Conn As ADODB.Connection
     Dim Mappings As Collection
+    
+    If gAppContext Is Nothing Then
+        MsgBox "Application context is not initialized.", vbExclamation, APP_NAME
+        Exit Sub
+    End If
+    
+    If Not gAppContext.IsConnected Then
+        MsgBox "No active SQL connection is available.", vbExclamation, APP_NAME
+        Exit Sub
+    End If
+    
+    If Not gAppContext.HasSelectedTarget Then
+        MsgBox "No target table is selected.", vbExclamation, APP_NAME
+        Exit Sub
+    End If
+    
+    Set Conn = GetActiveConnection()
+    If Conn Is Nothing Then
+        MsgBox "No active database connection is available.", vbExclamation, APP_NAME
+        Exit Sub
+    End If
     
     SetGlobalStatus "Loading saved mapping..."
     AppendStatusMessage "Loading saved mapping..."
     DoEvents
     
     Set Mappings = mMappingManager.LoadMapping( _
-        mSqlConnection.Connection, _
-        cmbDatabase.Text, _
-        GetSelectedSchemaName(), _
-        GetSelectedTableName())
+        Conn, _
+        gAppContext.SelectedDatabase, _
+        gAppContext.SelectedSchema, _
+        gAppContext.SelectedTable)
     
     If Mappings.Count = 0 Then
         AppendStatusMessage "No saved mapping found."
@@ -957,19 +1045,43 @@ End Sub
 Private Sub cmdSaveMapping_Click()
     On Error GoTo ErrorHandler
     
+    Dim Conn As ADODB.Connection
     Dim Mappings As Collection
+    
+    If gAppContext Is Nothing Then
+        MsgBox "Application context is not initialized.", vbExclamation, APP_NAME
+        Exit Sub
+    End If
+    
+    If Not gAppContext.IsConnected Then
+        MsgBox "No active SQL connection is available.", vbExclamation, APP_NAME
+        Exit Sub
+    End If
+    
+    If Not gAppContext.HasSelectedTarget Then
+        MsgBox "No target table is selected.", vbExclamation, APP_NAME
+        Exit Sub
+    End If
+    
+    Set Conn = GetActiveConnection()
+    If Conn Is Nothing Then
+        MsgBox "No active database connection is available.", vbExclamation, APP_NAME
+        Exit Sub
+    End If
+    
+    Set Mappings = CollectMappingsFromGrid()
     
     SetGlobalStatus "Saving mapping..."
     AppendStatusMessage "Saving mapping..."
     DoEvents
     
-    Set Mappings = CollectMappingsFromGrid()
+    mMappingManager.EnsureMappingTableExists Conn, gAppContext.SelectedDatabase
     
     mMappingManager.SaveMapping _
-        mSqlConnection.Connection, _
-        cmbDatabase.Text, _
-        GetSelectedSchemaName(), _
-        GetSelectedTableName(), _
+        Conn, _
+        gAppContext.SelectedDatabase, _
+        gAppContext.SelectedSchema, _
+        gAppContext.SelectedTable, _
         Mappings
     
     AppendStatusMessage "Mapping saved successfully."
@@ -986,6 +1098,7 @@ End Sub
 Private Sub cmdStartImport_Click()
     On Error GoTo ErrorHandler
     
+    Dim Conn As ADODB.Connection
     Dim Options As clsImportOptions
     Dim Mappings As Collection
     Dim MissingRequired As String
@@ -993,6 +1106,30 @@ Private Sub cmdStartImport_Click()
     Dim InsertedToStageCount As Long
     Dim StageTableName As String
     Dim FinalTotalRows As Long
+    Dim FriendlyMessage As String
+    Dim OriginalErrNumber As Long
+    Dim OriginalErrDescription As String
+    
+    If gAppContext Is Nothing Then
+        MsgBox "Application context is not initialized.", vbExclamation, APP_NAME
+        Exit Sub
+    End If
+    
+    If Not gAppContext.IsConnected Then
+        MsgBox "No active SQL connection is available.", vbExclamation, APP_NAME
+        Exit Sub
+    End If
+    
+    If Not gAppContext.HasSelectedTarget Then
+        MsgBox "No target table is selected.", vbExclamation, APP_NAME
+        Exit Sub
+    End If
+    
+    Set Conn = GetActiveConnection()
+    If Conn Is Nothing Then
+        MsgBox "No active database connection is available.", vbExclamation, APP_NAME
+        Exit Sub
+    End If
     
     If Not ValidateExcelSelectionInputs() Then Exit Sub
     
@@ -1017,12 +1154,15 @@ Private Sub cmdStartImport_Click()
     SetImportUiBusyState True
     ResetExecutionProgress
     
+    ' --------------------------------------------------
+    ' Phase 1: Read Excel + Create Stage + Insert to Stage
+    ' --------------------------------------------------
     Set mImportLogger = New clsImportLogger
     mImportLogger.StartLog _
-        Trim$(txtServerName.Text), _
-        cmbDatabase.Text, _
-        GetSelectedSchemaName(), _
-        GetSelectedTableName(), _
+        gAppContext.ServerName, _
+        gAppContext.SelectedDatabase, _
+        gAppContext.SelectedSchema, _
+        gAppContext.SelectedTable, _
         Trim$(txtExcelFile.Text), _
         GetExcelReadModeText(Options.ExcelReadMode)
     
@@ -1034,6 +1174,7 @@ Private Sub cmdStartImport_Click()
     DoEvents
     
     CheckForCancelRequest
+    
     mExcelReader.ReadMode = Options.ExcelReadMode
     Set ExcelRows = mExcelReader.LoadRows(Trim$(txtExcelFile.Text), Me)
     
@@ -1045,11 +1186,12 @@ Private Sub cmdStartImport_Click()
     DoEvents
     
     CheckForCancelRequest
+    
     StageTableName = mStagingManager.CreateStageTable( _
-        mSqlConnection.Connection, _
-        cmbDatabase.Text, _
-        GetSelectedSchemaName(), _
-        GetSelectedTableName(), _
+        Conn, _
+        gAppContext.SelectedDatabase, _
+        gAppContext.SelectedSchema, _
+        gAppContext.SelectedTable, _
         Mappings, _
         mTargetColumns)
     
@@ -1061,10 +1203,12 @@ Private Sub cmdStartImport_Click()
     ResetExecutionCountersOnly
     DoEvents
     
+    CheckForCancelRequest
+    
     InsertedToStageCount = mStagingManager.InsertRowsIntoStage( _
-        mSqlConnection.Connection, _
-        cmbDatabase.Text, _
-        GetSelectedSchemaName(), _
+        Conn, _
+        gAppContext.SelectedDatabase, _
+        gAppContext.SelectedSchema, _
         ExcelRows, _
         Mappings, _
         mTargetColumns, _
@@ -1075,17 +1219,35 @@ Private Sub cmdStartImport_Click()
     AppendStatusMessage CStr(InsertedToStageCount) & " rows inserted into staging."
     mImportLogger.WriteInfo CStr(InsertedToStageCount) & " rows inserted into staging."
     
+    ' --------------------------------------------------
+    ' Phase 2: Import from Stage to Target
+    ' IMPORTANT: use a NEW logger so counts belong only to target phase
+    ' --------------------------------------------------
     lblCurrentStep.Caption = "Importing rows to target..."
     SetGlobalStatus "Importing rows to target..."
     ResetExecutionCountersOnly
+    
+    Set mImportLogger = New clsImportLogger
+    mImportLogger.StartLog _
+        gAppContext.ServerName, _
+        gAppContext.SelectedDatabase, _
+        gAppContext.SelectedSchema, _
+        gAppContext.SelectedTable, _
+        Trim$(txtExcelFile.Text), _
+        GetExcelReadModeText(Options.ExcelReadMode)
+    
+    mImportLogger.WriteInfo "Target import phase started."
+    mImportLogger.WriteInfo "Stage table: " & StageTableName
+    
     DoEvents
     
     CheckForCancelRequest
+    
     mImportEngine.ExecuteImport _
-        mSqlConnection.Connection, _
-        cmbDatabase.Text, _
-        GetSelectedSchemaName(), _
-        GetSelectedTableName(), _
+        Conn, _
+        gAppContext.SelectedDatabase, _
+        gAppContext.SelectedSchema, _
+        gAppContext.SelectedTable, _
         StageTableName, _
         Mappings, _
         mTargetColumns, _
@@ -1098,7 +1260,7 @@ Private Sub cmdStartImport_Click()
     DoEvents
     
     On Error Resume Next
-    mStagingManager.DropStageTable mSqlConnection.Connection, cmbDatabase.Text, GetSelectedSchemaName()
+    mStagingManager.DropStageTable Conn, gAppContext.SelectedDatabase, gAppContext.SelectedSchema
     If Err.Number = 0 Then
         AppendStatusMessage "Staging table dropped."
     Else
@@ -1118,23 +1280,25 @@ Private Sub cmdStartImport_Click()
     lblCurrentStep.Caption = "Import completed"
     SetGlobalStatus "Import completed"
     
-    FinalTotalRows = SafeCLng(lblSuccessCount.Caption, 0) + _
-                     SafeCLng(lblSkipCount.Caption, 0) + _
-                     SafeCLng(lblErrorCount.Caption, 0)
+    lblSuccessCount.Caption = CStr(mImportLogger.SuccessCount)
+    lblSkipCount.Caption = CStr(mImportLogger.SkipCount)
+    lblErrorCount.Caption = CStr(mImportLogger.ErrorCount)
+    
+    FinalTotalRows = mImportLogger.SuccessCount + _
+                     mImportLogger.SkipCount + _
+                     mImportLogger.ErrorCount
     
     SetExecutionSummary _
-        SafeCLng(lblSuccessCount.Caption, 0), _
-        SafeCLng(lblSkipCount.Caption, 0), _
-        SafeCLng(lblErrorCount.Caption, 0), _
+        mImportLogger.SuccessCount, _
+        mImportLogger.SkipCount, _
+        mImportLogger.ErrorCount, _
         FinalTotalRows
     
-    sstMain.Tab = 2
-    
     MsgBox "Import completed successfully." & vbCrLf & vbCrLf & _
-           "Target table: " & GetSelectedSchemaName() & "." & GetSelectedTableName() & vbCrLf & _
-           "Imported rows: " & lblSuccessCount.Caption & vbCrLf & _
-           "Skipped rows: " & lblSkipCount.Caption & vbCrLf & _
-           "Error rows: " & lblErrorCount.Caption & vbCrLf & vbCrLf & _
+           "Target table: " & gAppContext.GetFullTargetName() & vbCrLf & _
+           "Imported rows: " & CStr(mImportLogger.SuccessCount) & vbCrLf & _
+           "Skipped rows: " & CStr(mImportLogger.SkipCount) & vbCrLf & _
+           "Error rows: " & CStr(mImportLogger.ErrorCount) & vbCrLf & vbCrLf & _
            "Log file:" & vbCrLf & mImportLogger.LogFilePath, vbInformation, APP_NAME
     
 SafeExit:
@@ -1145,21 +1309,17 @@ SafeExit:
     Exit Sub
 
 ErrorHandler:
-    Dim FriendlyMessage As String
-    Dim OriginalErrNumber As Long
-    Dim OriginalErrDescription As String
-    
     OriginalErrNumber = Err.Number
     OriginalErrDescription = Err.Description
     
     Screen.MousePointer = vbDefault
+    
     If OriginalErrNumber = vbObjectError + 3001 _
        Or OriginalErrNumber = vbObjectError + 3002 _
        Or OriginalErrNumber = vbObjectError + 3003 _
        Or OriginalErrNumber = vbObjectError + 3004 Then
         
         FriendlyMessage = "Import was cancelled by user."
-        
         SetCancelledExecutionState
     Else
         FriendlyMessage = GetFriendlyImportErrorMessage(OriginalErrNumber, OriginalErrDescription)
@@ -1168,11 +1328,12 @@ ErrorHandler:
     On Error Resume Next
     
     If Not mStagingManager Is Nothing Then
-        mStagingManager.DropStageTable mSqlConnection.Connection, cmbDatabase.Text, GetSelectedSchemaName()
+        mStagingManager.DropStageTable Conn, gAppContext.SelectedDatabase, gAppContext.SelectedSchema
     End If
     
     If Not mImportLogger Is Nothing Then
         mImportLogger.WriteError "Error " & CStr(OriginalErrNumber) & ": " & OriginalErrDescription
+        
         If OriginalErrNumber = vbObjectError + 3001 _
            Or OriginalErrNumber = vbObjectError + 3002 _
            Or OriginalErrNumber = vbObjectError + 3003 _
@@ -1188,7 +1349,6 @@ ErrorHandler:
     
     SetImportUiBusyState False
     cmdStartImport.Enabled = True
-    sstMain.Tab = 2
     
     MsgBox FriendlyMessage & vbCrLf & vbCrLf & _
            "More details have been written to the log file.", _
@@ -1201,9 +1361,20 @@ Private Sub cmdValidateMapping_Click()
     Dim Mappings As Collection
     Dim MissingRequired As String
     
-    SetGlobalStatus "Validating mapping..."
-    AppendStatusMessage "Validating mapping..."
-    DoEvents
+    If gAppContext Is Nothing Then
+        MsgBox "Application context is not initialized.", vbExclamation, APP_NAME
+        Exit Sub
+    End If
+    
+    If Not gAppContext.IsConnected Then
+        MsgBox "No active SQL connection is available.", vbExclamation, APP_NAME
+        Exit Sub
+    End If
+    
+    If Not gAppContext.HasSelectedTarget Then
+        MsgBox "No target table is selected.", vbExclamation, APP_NAME
+        Exit Sub
+    End If
     
     Set Mappings = CollectMappingsFromGrid()
     
@@ -1215,21 +1386,25 @@ Private Sub cmdValidateMapping_Click()
     MissingRequired = mMappingManager.ValidateRequiredMappings(mTargetColumns, Mappings)
     
     If Len(MissingRequired) > 0 Then
-        AppendStatusMessage "Mapping validation failed. Missing required target columns found."
-        MsgBox "Required target columns are not mapped:" & vbCrLf & vbCrLf & MissingRequired, vbExclamation, APP_NAME
+        AppendStatusMessage "Mapping validation failed. Required fields are missing."
+        SetGlobalStatus "Mapping validation failed"
         cmdStartImport.Enabled = False
-    Else
-        AppendStatusMessage "Mapping validation completed successfully."
-        SetGlobalStatus "Mapping is valid"
-        cmdStartImport.Enabled = True
-        MsgBox "Mapping is valid.", vbInformation, APP_NAME
+        
+        MsgBox "Required target columns are not mapped:" & vbCrLf & vbCrLf & _
+               MissingRequired, vbExclamation, APP_NAME
+        Exit Sub
     End If
     
+    cmdStartImport.Enabled = True
+    AppendStatusMessage "Mapping validation successful."
+    SetGlobalStatus "Mapping validation successful"
+    
+    MsgBox "Mapping is valid. You can now start the import.", vbInformation, APP_NAME
     Exit Sub
 
 ErrorHandler:
-    AppendStatusMessage "Mapping validation failed: " & Err.Description
-    MsgBox "Mapping validation failed." & vbCrLf & Err.Description, vbExclamation, APP_NAME
+    AppendStatusMessage "Failed to validate mapping: " & Err.Description
+    MsgBox "Failed to validate mapping." & vbCrLf & Err.Description, vbExclamation, APP_NAME
 End Sub
 
 Private Sub Form_Load()
@@ -1239,48 +1414,51 @@ End Sub
 Private Sub InitializeForm()
     On Error GoTo ErrorHandler
     
-    Me.Caption = APP_NAME
-    CenterFormOnScreen
+    EnsureImportObjects
     
-    Set mSqlConnection = New clsSqlServerConnection
-    Set mDatabaseBrowser = New clsDatabaseBrowser
-    Set mMappingManager = New clsMappingManager
-    Set mTargetColumns = New Collection
-    Set mExcelReader = New clsExcelReader
-    Set mExcelHeaders = New Collection
-    Set mImportLogger = New clsImportLogger
-    Set mStagingManager = New clsStagingManager
-    Set mImportEngine = New clsImportEngine
-    Set mAllDatabases = New Collection
-    Set mAllTables = New Collection
-
-    mCancelRequested = False
-    cmdCancelImport.Enabled = False
-
-    InitializeAuthenticationCombo
-    InitializeExcelReadOptions
-    LoadConnectionSettings
-    InitializeMappingGrid
-    InitializePreviewGrid
-    InitializeCounters
-    SetInitialControlState
+    If gAppContext Is Nothing Then
+        MsgBox "Application context is not initialized.", vbExclamation, APP_NAME
+        Unload Me
+        Exit Sub
+    End If
     
-    sstMain.Tab = 0
+    If Not gAppContext.IsConnected Then
+        MsgBox "No active SQL connection is available.", vbExclamation, APP_NAME
+        Unload Me
+        Exit Sub
+    End If
+    
+    If Not gAppContext.HasSelectedTarget Then
+        MsgBox "No target table is selected.", vbExclamation, APP_NAME
+        Unload Me
+        Exit Sub
+    End If
+    
+    If GetActiveConnection() Is Nothing Then
+        MsgBox "No active database connection is available.", vbExclamation, APP_NAME
+        Unload Me
+        Exit Sub
+    End If
+    
+    ApplyAppContextToImportForm
+    LoadTargetTableStructureFromContext
     
     Exit Sub
 
 ErrorHandler:
-    MsgBox "Error initializing form:" & vbCrLf & Err.Number & " - " & Err.Description, vbCritical, APP_NAME
+    MsgBox "Error initializing import form." & vbCrLf & _
+           Err.Number & " - " & Err.Description, vbCritical, APP_NAME
+    Unload Me
 End Sub
 
-Private Sub InitializeAuthenticationCombo()
-    cmbAuthentication.Clear
-    cmbAuthentication.AddItem AUTH_WINDOWS
-    cmbAuthentication.AddItem AUTH_SQL_SERVER
-    cmbAuthentication.ListIndex = 0
-    
-    UpdateAuthenticationControls
-End Sub
+'Private Sub InitializeAuthenticationCombo()
+'    cmbAuthentication.Clear
+'    cmbAuthentication.AddItem AUTH_WINDOWS
+'    cmbAuthentication.AddItem AUTH_SQL_SERVER
+'    cmbAuthentication.ListIndex = 0
+'
+'    UpdateAuthenticationControls
+'End Sub
 
 Private Sub InitializeExcelReadOptions()
     optReadByAdo.Value = False
@@ -1333,8 +1511,8 @@ Private Sub InitializeCounters()
 End Sub
 
 Private Sub SetInitialControlState()
-    FraConnection.Enabled = True
-    fraDatabaseTable.Enabled = False
+    'FraConnection.Enabled = True
+    'fraDatabaseTable.Enabled = False
     fraExcel.Enabled = False
     
     grdMapping.Enabled = False
@@ -1357,40 +1535,40 @@ Private Sub SetInitialControlState()
     txtPassword.Enabled = False
 End Sub
 
-Private Sub cmbAuthentication_Click()
-    On Error GoTo ErrorHandler
-    
-    UpdateAuthenticationControls
-    ResetAfterConnectionSettingsChange
-    
-    AppendStatusMessage "Authentication mode changed. Database and table selections were cleared."
-    Exit Sub
-
-ErrorHandler:
-    MsgBox "Error changing authentication mode." & vbCrLf & _
-           Err.Number & " - " & Err.Description, vbExclamation, APP_NAME
-End Sub
-
-Private Sub UpdateAuthenticationControls()
-    Dim IsSqlAuth As Boolean
-    
-    IsSqlAuth = (cmbAuthentication.Text = AUTH_SQL_SERVER)
-    
-    txtUserName.Enabled = IsSqlAuth
-    txtPassword.Enabled = IsSqlAuth
-    
-    If Not IsSqlAuth Then
-        txtUserName.Text = ""
-        txtPassword.Text = ""
-    End If
-End Sub
-
+'Private Sub cmbAuthentication_Click()
+'    On Error GoTo ErrorHandler
+'
+'    UpdateAuthenticationControls
+'    ResetAfterConnectionSettingsChange
+'
+'    AppendStatusMessage "Authentication mode changed. Database and table selections were cleared."
+'    Exit Sub
+'
+'ErrorHandler:
+'    MsgBox "Error changing authentication mode." & vbCrLf & _
+'           Err.Number & " - " & Err.Description, vbExclamation, APP_NAME
+'End Sub
+'
+'Private Sub UpdateAuthenticationControls()
+'    Dim IsSqlAuth As Boolean
+'
+'    IsSqlAuth = (cmbAuthentication.Text = AUTH_SQL_SERVER)
+'
+'    txtUserName.Enabled = IsSqlAuth
+'    txtPassword.Enabled = IsSqlAuth
+'
+'    If Not IsSqlAuth Then
+'        txtUserName.Text = ""
+'        txtPassword.Text = ""
+'    End If
+'End Sub
+'
 Private Sub cmdExit_Click()
     Unload Me
 End Sub
 
 Private Sub SetConnectedState()
-    fraDatabaseTable.Enabled = True
+    'fraDatabaseTable.Enabled = True
     fraExcel.Enabled = False
     
     grdMapping.Enabled = False
@@ -1412,11 +1590,11 @@ Private Sub SetConnectedState()
 End Sub
 
 Private Sub SetDisconnectedState()
-    fraDatabaseTable.Enabled = False
+    'fraDatabaseTable.Enabled = False
     fraExcel.Enabled = False
     
-    cmbDatabase.Clear
-    cmbTable.Clear
+    'cmbDatabase.Clear
+    'cmbTable.Clear
     
     grdMapping.Enabled = False
     cmdAutoMatch.Enabled = False
@@ -1450,270 +1628,270 @@ Private Sub AppendStatusMessage(ByVal MessageText As String)
     SetGlobalStatus MessageText
 End Sub
 
-Private Function ValidateConnectionInputs() As Boolean
-    ValidateConnectionInputs = False
-    
-    If IsNullOrEmpty(txtServerName.Text) Then
-        MsgBox "Please enter server name.", vbExclamation, APP_NAME
-        txtServerName.SetFocus
-        Exit Function
-    End If
-    
-    If cmbAuthentication.ListIndex < 0 Then
-        MsgBox "Please select authentication type.", vbExclamation, APP_NAME
-        cmbAuthentication.SetFocus
-        Exit Function
-    End If
-    
-    If cmbAuthentication.Text = AUTH_SQL_SERVER Then
-        If IsNullOrEmpty(txtUserName.Text) Then
-            MsgBox "Please enter user name.", vbExclamation, APP_NAME
-            txtUserName.SetFocus
-            Exit Function
-        End If
-        
-        If IsNullOrEmpty(txtPassword.Text) Then
-            MsgBox "Please enter password.", vbExclamation, APP_NAME
-            txtPassword.SetFocus
-            Exit Function
-        End If
-    End If
-    
-    ValidateConnectionInputs = True
-End Function
+'Private Function ValidateConnectionInputs() As Boolean
+'    ValidateConnectionInputs = False
+'
+'    If IsNullOrEmpty(txtServerName.Text) Then
+'        MsgBox "Please enter server name.", vbExclamation, APP_NAME
+'        txtServerName.SetFocus
+'        Exit Function
+'    End If
+'
+'    If cmbAuthentication.ListIndex < 0 Then
+'        MsgBox "Please select authentication type.", vbExclamation, APP_NAME
+'        cmbAuthentication.SetFocus
+'        Exit Function
+'    End If
+'
+'    If cmbAuthentication.Text = AUTH_SQL_SERVER Then
+'        If IsNullOrEmpty(txtUserName.Text) Then
+'            MsgBox "Please enter user name.", vbExclamation, APP_NAME
+'            txtUserName.SetFocus
+'            Exit Function
+'        End If
+'
+'        If IsNullOrEmpty(txtPassword.Text) Then
+'            MsgBox "Please enter password.", vbExclamation, APP_NAME
+'            txtPassword.SetFocus
+'            Exit Function
+'        End If
+'    End If
+'
+'    ValidateConnectionInputs = True
+'End Function
 
-Private Sub cmdConnect_Click()
-    On Error GoTo ErrorHandler
-    
-    Screen.MousePointer = vbHourglass
-    SetGlobalStatus "Connecting to SQL Server..."
-    AppendStatusMessage "Connecting to SQL Server..."
-    DoEvents
-    
-    If Not ValidateConnectionInputs() Then GoTo SafeExit
-    
-    If mSqlConnection.OpenConnection( _
-        Trim$(txtServerName.Text), _
-        cmbAuthentication.Text, _
-        Trim$(txtUserName.Text), _
-        txtPassword.Text) Then
-        
-        SetConnectedState
-        LoadDatabases
-                
-        If chkRememberConnectionSettings.Value = vbChecked Then
-            SaveConnectionSettings
-        Else
-            ClearSavedConnectionSettings
-        End If
+'Private Sub cmdConnect_Click()
+'    On Error GoTo ErrorHandler
+'
+'    Screen.MousePointer = vbHourglass
+'    SetGlobalStatus "Connecting to SQL Server..."
+'    AppendStatusMessage "Connecting to SQL Server..."
+'    DoEvents
+'
+'    If Not ValidateConnectionInputs() Then GoTo SafeExit
+'
+'    If mSqlConnection.OpenConnection( _
+'        Trim$(txtServerName.Text), _
+'        cmbAuthentication.Text, _
+'        Trim$(txtUserName.Text), _
+'        txtPassword.Text) Then
+'
+'        SetConnectedState
+'        LoadDatabases
+'
+'        If chkRememberConnectionSettings.Value = vbChecked Then
+'            SaveConnectionSettings
+'        Else
+'            ClearSavedConnectionSettings
+'        End If
+'
+'        MsgBox "Connection established successfully.", vbInformation, APP_NAME
+'    End If
+'
+'SafeExit:
+'    Screen.MousePointer = vbDefault
+'    Exit Sub
+'
+'ErrorHandler:
+'    Screen.MousePointer = vbDefault
+'
+'    ResetAfterConnectionSettingsChange
+'
+'    AppendStatusMessage "Connection failed: " & Err.Description
+'    MsgBox "Connection failed." & vbCrLf & _
+'           Err.Number & " - " & Err.Description, vbCritical, APP_NAME
+'End Sub
 
-        MsgBox "Connection established successfully.", vbInformation, APP_NAME
-    End If
-    
-SafeExit:
-    Screen.MousePointer = vbDefault
-    Exit Sub
-
-ErrorHandler:
-    Screen.MousePointer = vbDefault
-    
-    ResetAfterConnectionSettingsChange
-    
-    AppendStatusMessage "Connection failed: " & Err.Description
-    MsgBox "Connection failed." & vbCrLf & _
-           Err.Number & " - " & Err.Description, vbCritical, APP_NAME
-End Sub
-
-Private Sub Form_Unload(Cancel As Integer)
-    On Error Resume Next
-    
-    If Not mSqlConnection Is Nothing Then
-        mSqlConnection.CloseConnection
-    End If
-    
-    Set mSqlConnection = Nothing
-End Sub
+'Private Sub Form_Unload(Cancel As Integer)
+'    On Error Resume Next
+'
+'    If Not mSqlConnection Is Nothing Then
+'        mSqlConnection.CloseConnection
+'    End If
+'
+'    Set mSqlConnection = Nothing
+'End Sub
 
 Private Sub SetGlobalStatus(ByVal StatusText As String)
     lblGlobalStatus.Caption = StatusText
     DoEvents
 End Sub
 
-Private Sub LoadDatabases()
-    On Error GoTo ErrorHandler
-    
-    Dim Rs As ADODB.Recordset
-    Dim DbName As String
-    
-    cmbDatabase.Clear
-    cmbTable.Clear
-    txtSearchDatabase.Text = ""
-    txtSearchTable.Text = ""
-    
-    Set mAllDatabases = New Collection
-    Set mAllTables = New Collection
-    
-    SetGlobalStatus "Loading databases..."
-    AppendStatusMessage "Loading user databases..."
-    DoEvents
-    
-    Set Rs = mDatabaseBrowser.GetUserDatabases(mSqlConnection.Connection)
-    
-    Do While Not Rs.EOF
-        DbName = NzString(Rs.Fields("name").Value)
-        mAllDatabases.Add DbName
-        cmbDatabase.AddItem DbName
-        Rs.MoveNext
-    Loop
-    
-    Rs.Close
-    Set Rs = Nothing
-    
-    If cmbDatabase.ListCount > 0 Then
-        cmbDatabase.ListIndex = 0
-    End If
-    
-    SetGlobalStatus "Databases loaded"
-    AppendStatusMessage "Database list loaded successfully."
-    
-    Exit Sub
+'Private Sub LoadDatabases()
+'    On Error GoTo ErrorHandler
+'
+'    Dim Rs As ADODB.Recordset
+'    Dim DbName As String
+'
+'    cmbDatabase.Clear
+'    cmbTable.Clear
+'    txtSearchDatabase.Text = ""
+'    txtSearchTable.Text = ""
+'
+'    Set mAllDatabases = New Collection
+'    Set mAllTables = New Collection
+'
+'    SetGlobalStatus "Loading databases..."
+'    AppendStatusMessage "Loading user databases..."
+'    DoEvents
+'
+'    Set Rs = mDatabaseBrowser.GetUserDatabases(mSqlConnection.Connection)
+'
+'    Do While Not Rs.EOF
+'        DbName = NzString(Rs.Fields("name").Value)
+'        mAllDatabases.Add DbName
+'        cmbDatabase.AddItem DbName
+'        Rs.MoveNext
+'    Loop
+'
+'    Rs.Close
+'    Set Rs = Nothing
+'
+'    If cmbDatabase.ListCount > 0 Then
+'        cmbDatabase.ListIndex = 0
+'    End If
+'
+'    SetGlobalStatus "Databases loaded"
+'    AppendStatusMessage "Database list loaded successfully."
+'
+'    Exit Sub
+'
+'ErrorHandler:
+'    AppendStatusMessage "Failed to load databases: " & Err.Description
+'    MsgBox "Failed to load databases." & vbCrLf & Err.Number & " - " & Err.Description, vbCritical, APP_NAME
+'End Sub
 
-ErrorHandler:
-    AppendStatusMessage "Failed to load databases: " & Err.Description
-    MsgBox "Failed to load databases." & vbCrLf & Err.Number & " - " & Err.Description, vbCritical, APP_NAME
-End Sub
+'Private Sub LoadTables()
+'    On Error GoTo ErrorHandler
+'
+'    Dim Rs As ADODB.Recordset
+'    Dim DisplayText As String
+'
+'    cmbTable.Clear
+'    txtSearchTable.Text = ""
+'    Set mAllTables = New Collection
+'
+'    If cmbDatabase.ListIndex < 0 Then
+'        MsgBox MSG_NO_DATABASE_SELECTED, vbExclamation, APP_NAME
+'        cmbDatabase.SetFocus
+'        Exit Sub
+'    End If
+'
+'    SetGlobalStatus "Loading tables..."
+'    AppendStatusMessage "Loading base tables for database: " & cmbDatabase.Text
+'    DoEvents
+'
+'    Set Rs = mDatabaseBrowser.GetBaseTables(mSqlConnection.Connection, cmbDatabase.Text)
+'
+'    Do While Not Rs.EOF
+'        DisplayText = NzString(Rs.Fields("TABLE_SCHEMA").Value) & "." & NzString(Rs.Fields("TABLE_NAME").Value)
+'        mAllTables.Add DisplayText
+'        cmbTable.AddItem DisplayText
+'        Rs.MoveNext
+'    Loop
+'
+'    Rs.Close
+'    Set Rs = Nothing
+'
+'    If cmbTable.ListCount > 0 Then
+'        cmbTable.ListIndex = 0
+'    End If
+'
+'    SetGlobalStatus "Tables loaded"
+'    AppendStatusMessage "Table list loaded successfully."
+'
+'    Exit Sub
+'
+'ErrorHandler:
+'    AppendStatusMessage "Failed to load tables: " & Err.Description
+'    MsgBox "Failed to load tables." & vbCrLf & Err.Number & " - " & Err.Description, vbCritical, APP_NAME
+'End Sub
 
-Private Sub LoadTables()
-    On Error GoTo ErrorHandler
-    
-    Dim Rs As ADODB.Recordset
-    Dim DisplayText As String
-    
-    cmbTable.Clear
-    txtSearchTable.Text = ""
-    Set mAllTables = New Collection
-    
-    If cmbDatabase.ListIndex < 0 Then
-        MsgBox MSG_NO_DATABASE_SELECTED, vbExclamation, APP_NAME
-        cmbDatabase.SetFocus
-        Exit Sub
-    End If
-    
-    SetGlobalStatus "Loading tables..."
-    AppendStatusMessage "Loading base tables for database: " & cmbDatabase.Text
-    DoEvents
-    
-    Set Rs = mDatabaseBrowser.GetBaseTables(mSqlConnection.Connection, cmbDatabase.Text)
-    
-    Do While Not Rs.EOF
-        DisplayText = NzString(Rs.Fields("TABLE_SCHEMA").Value) & "." & NzString(Rs.Fields("TABLE_NAME").Value)
-        mAllTables.Add DisplayText
-        cmbTable.AddItem DisplayText
-        Rs.MoveNext
-    Loop
-    
-    Rs.Close
-    Set Rs = Nothing
-    
-    If cmbTable.ListCount > 0 Then
-        cmbTable.ListIndex = 0
-    End If
-    
-    SetGlobalStatus "Tables loaded"
-    AppendStatusMessage "Table list loaded successfully."
-    
-    Exit Sub
+'Private Sub cmdLoadTables_Click()
+'    LoadTables
+'End Sub
 
-ErrorHandler:
-    AppendStatusMessage "Failed to load tables: " & Err.Description
-    MsgBox "Failed to load tables." & vbCrLf & Err.Number & " - " & Err.Description, vbCritical, APP_NAME
-End Sub
+'Private Sub cmbDatabase_Click()
+'    cmbTable.Clear
+'    fraExcel.Enabled = False
+'
+'    ResetAfterTableSelectionChange
+'
+'    SetGlobalStatus "Database selected: " & cmbDatabase.Text
+'End Sub
 
-Private Sub cmdLoadTables_Click()
-    LoadTables
-End Sub
+'Private Sub cmbTable_Click()
+'    On Error GoTo ErrorHandler
+'
+'    If cmbTable.ListIndex >= 0 Then
+'        ResetAfterTableSelectionChange
+'        fraExcel.Enabled = True
+'
+'        LoadTargetTableStructure
+'        mMappingManager.EnsureMappingTableExists mSqlConnection.Connection, cmbDatabase.Text
+'
+'        SetGlobalStatus "Table selected: " & cmbTable.Text
+'        AppendStatusMessage "Target table selected: " & cmbTable.Text
+'        AppendStatusMessage "Mapping table is ready."
+'    End If
+'
+'    Exit Sub
+'
+'ErrorHandler:
+'    AppendStatusMessage "Error preparing selected table: " & Err.Description
+'    MsgBox "Error preparing selected table." & vbCrLf & Err.Number & " - " & Err.Description, vbCritical, APP_NAME
+'End Sub
 
-Private Sub cmbDatabase_Click()
-    cmbTable.Clear
-    fraExcel.Enabled = False
-    
-    ResetAfterTableSelectionChange
-    
-    SetGlobalStatus "Database selected: " & cmbDatabase.Text
-End Sub
+'Private Function GetSelectedSchemaName() As String
+'    Dim FullName As String
+'    Dim DotPos As Long
+'
+'    FullName = Trim$(cmbTable.Text)
+'    DotPos = InStr(1, FullName, ".")
+'
+'    If DotPos > 0 Then
+'        GetSelectedSchemaName = Left$(FullName, DotPos - 1)
+'    Else
+'        GetSelectedSchemaName = "dbo"
+'    End If
+'End Function
 
-Private Sub cmbTable_Click()
-    On Error GoTo ErrorHandler
-    
-    If cmbTable.ListIndex >= 0 Then
-        ResetAfterTableSelectionChange
-        fraExcel.Enabled = True
-        
-        LoadTargetTableStructure
-        mMappingManager.EnsureMappingTableExists mSqlConnection.Connection, cmbDatabase.Text
-        
-        SetGlobalStatus "Table selected: " & cmbTable.Text
-        AppendStatusMessage "Target table selected: " & cmbTable.Text
-        AppendStatusMessage "Mapping table is ready."
-    End If
-    
-    Exit Sub
+'Private Function GetSelectedTableName() As String
+'    Dim FullName As String
+'    Dim DotPos As Long
+'
+'    FullName = Trim$(cmbTable.Text)
+'    DotPos = InStr(1, FullName, ".")
+'
+'    If DotPos > 0 Then
+'        GetSelectedTableName = Mid$(FullName, DotPos + 1)
+'    Else
+'        GetSelectedTableName = FullName
+'    End If
+'End Function
 
-ErrorHandler:
-    AppendStatusMessage "Error preparing selected table: " & Err.Description
-    MsgBox "Error preparing selected table." & vbCrLf & Err.Number & " - " & Err.Description, vbCritical, APP_NAME
-End Sub
-
-Private Function GetSelectedSchemaName() As String
-    Dim FullName As String
-    Dim DotPos As Long
-    
-    FullName = Trim$(cmbTable.Text)
-    DotPos = InStr(1, FullName, ".")
-    
-    If DotPos > 0 Then
-        GetSelectedSchemaName = Left$(FullName, DotPos - 1)
-    Else
-        GetSelectedSchemaName = "dbo"
-    End If
-End Function
-
-Private Function GetSelectedTableName() As String
-    Dim FullName As String
-    Dim DotPos As Long
-    
-    FullName = Trim$(cmbTable.Text)
-    DotPos = InStr(1, FullName, ".")
-    
-    If DotPos > 0 Then
-        GetSelectedTableName = Mid$(FullName, DotPos + 1)
-    Else
-        GetSelectedTableName = FullName
-    End If
-End Function
-
-Private Sub LoadTargetTableStructure()
-    On Error GoTo ErrorHandler
-    
-    SetGlobalStatus "Loading target table structure..."
-    AppendStatusMessage "Loading table structure for: " & cmbTable.Text
-    DoEvents
-    
-    Set mTargetColumns = mDatabaseBrowser.GetTableColumns( _
-        mSqlConnection.Connection, _
-        cmbDatabase.Text, _
-        GetSelectedSchemaName(), _
-        GetSelectedTableName())
-    
-    SetGlobalStatus "Target table structure loaded"
-    AppendStatusMessage "Loaded " & CStr(mTargetColumns.Count) & " target columns."
-    
-    Exit Sub
-
-ErrorHandler:
-    AppendStatusMessage "Failed to load target table structure: " & Err.Description
-    MsgBox "Failed to load target table structure." & vbCrLf & Err.Number & " - " & Err.Description, vbCritical, APP_NAME
-End Sub
+'Private Sub LoadTargetTableStructure()
+'    On Error GoTo ErrorHandler
+'
+'    SetGlobalStatus "Loading target table structure..."
+'    AppendStatusMessage "Loading table structure for: " & cmbTable.Text
+'    DoEvents
+'
+'    Set mTargetColumns = mDatabaseBrowser.GetTableColumns( _
+'        mSqlConnection.Connection, _
+'        cmbDatabase.Text, _
+'        GetSelectedSchemaName(), _
+'        GetSelectedTableName())
+'
+'    SetGlobalStatus "Target table structure loaded"
+'    AppendStatusMessage "Loaded " & CStr(mTargetColumns.Count) & " target columns."
+'
+'    Exit Sub
+'
+'ErrorHandler:
+'    AppendStatusMessage "Failed to load target table structure: " & Err.Description
+'    MsgBox "Failed to load target table structure." & vbCrLf & Err.Number & " - " & Err.Description, vbCritical, APP_NAME
+'End Sub
 
 Private Function GetSelectedExcelReadMode() As Integer
     If optReadByExcel.Value = True Then
@@ -1726,15 +1904,23 @@ End Function
 Private Function ValidateExcelSelectionInputs() As Boolean
     ValidateExcelSelectionInputs = False
     
-    If cmbDatabase.ListIndex < 0 Then
-        MsgBox MSG_NO_DATABASE_SELECTED, vbExclamation, APP_NAME
-        cmbDatabase.SetFocus
+    If gAppContext Is Nothing Then
+        MsgBox "Application context is not initialized.", vbExclamation, APP_NAME
         Exit Function
     End If
     
-    If cmbTable.ListIndex < 0 Then
+    If Not gAppContext.IsConnected Then
+        MsgBox "No active SQL connection is available.", vbExclamation, APP_NAME
+        Exit Function
+    End If
+    
+    If Len(Trim$(gAppContext.SelectedDatabase)) = 0 Then
+        MsgBox MSG_NO_DATABASE_SELECTED, vbExclamation, APP_NAME
+        Exit Function
+    End If
+    
+    If Not gAppContext.HasSelectedTarget Then
         MsgBox MSG_NO_TABLE_SELECTED, vbExclamation, APP_NAME
-        cmbTable.SetFocus
         Exit Function
     End If
     
@@ -2127,8 +2313,8 @@ Private Sub ResetExecutionProgress()
 End Sub
 
 Private Sub SetImportUiBusyState(ByVal IsBusy As Boolean)
-    FraConnection.Enabled = Not IsBusy
-    fraDatabaseTable.Enabled = Not IsBusy
+    'FraConnection.Enabled = Not IsBusy
+    'fraDatabaseTable.Enabled = Not IsBusy
     fraExcel.Enabled = Not IsBusy
     
     grdMapping.Enabled = Not IsBusy
@@ -2147,14 +2333,6 @@ Private Sub SetImportUiBusyState(ByVal IsBusy As Boolean)
     cmdStartImport.Enabled = Not IsBusy
     cmdExit.Enabled = Not IsBusy
     cmdCancelImport.Enabled = IsBusy
-End Sub
-
-Private Sub CenterFormOnScreen()
-    Me.Left = (Screen.Width - Me.Width) \ 2
-    Me.Top = (Screen.Height - Me.Height) \ 2
-    
-    If Me.Top < 0 Then Me.Top = 0
-    If Me.Left < 0 Then Me.Left = 0
 End Sub
 
 Private Sub ResetExecutionCountersOnly()
@@ -2178,33 +2356,33 @@ Private Sub SetExecutionSummary( _
     prgImport.Value = PROGRESS_MAX
 End Sub
 
-Private Sub ResetAfterTableSelectionChange()
-    txtExcelFile.Text = ""
-    
-    Set mExcelHeaders = New Collection
-    ResetMappingGridRows
-    
-    grdMapping.Enabled = False
-    cmdAutoMatch.Enabled = False
-    cmdLoadSavedMapping.Enabled = False
-    cmdSaveMapping.Enabled = False
-    cmdValidateMapping.Enabled = False
-    
-    chkDeleteExisting.Value = vbUnchecked
-    chkContinueOnTypeError.Value = vbUnchecked
-    chkContinueOnDuplicate.Value = vbUnchecked
-    
-    chkDeleteExisting.Enabled = False
-    chkContinueOnTypeError.Enabled = False
-    chkContinueOnDuplicate.Enabled = False
-    chkAutoLoadSavedMapping.Enabled = False
-    
-    cmdStartImport.Enabled = False
-    cmbGridSqlColumns.Visible = False
-    
-    ResetExecutionProgress
-    ResetPreviewGrid
-End Sub
+'Private Sub ResetAfterTableSelectionChange()
+'    txtExcelFile.Text = ""
+'
+'    Set mExcelHeaders = New Collection
+'    ResetMappingGridRows
+'
+'    grdMapping.Enabled = False
+'    cmdAutoMatch.Enabled = False
+'    cmdLoadSavedMapping.Enabled = False
+'    cmdSaveMapping.Enabled = False
+'    cmdValidateMapping.Enabled = False
+'
+'    chkDeleteExisting.Value = vbUnchecked
+'    chkContinueOnTypeError.Value = vbUnchecked
+'    chkContinueOnDuplicate.Value = vbUnchecked
+'
+'    chkDeleteExisting.Enabled = False
+'    chkContinueOnTypeError.Enabled = False
+'    chkContinueOnDuplicate.Enabled = False
+'    chkAutoLoadSavedMapping.Enabled = False
+'
+'    cmdStartImport.Enabled = False
+'    cmbGridSqlColumns.Visible = False
+'
+'    ResetExecutionProgress
+'    ResetPreviewGrid
+'End Sub
 
 Private Function ContainsText(ByVal SourceText As String, ByVal SearchText As String) As Boolean
     If Len(Trim$(SearchText)) = 0 Then
@@ -2214,123 +2392,123 @@ Private Function ContainsText(ByVal SourceText As String, ByVal SearchText As St
     End If
 End Function
 
-Private Sub FilterDatabases()
-    Dim i As Long
-    Dim DbName As String
-    Dim SearchText As String
-    
-    SearchText = Trim$(txtSearchDatabase.Text)
-    
-    cmbDatabase.Clear
-    
-    For i = 1 To mAllDatabases.Count
-        DbName = CStr(mAllDatabases(i))
-        
-        If ContainsText(DbName, SearchText) Then
-            cmbDatabase.AddItem DbName
-        End If
-    Next i
-    
-    If cmbDatabase.ListCount > 0 Then
-        cmbDatabase.ListIndex = 0
-    End If
-End Sub
+'Private Sub FilterDatabases()
+'    Dim i As Long
+'    Dim DbName As String
+'    Dim SearchText As String
+'
+'    SearchText = Trim$(txtSearchDatabase.Text)
+'
+'    cmbDatabase.Clear
+'
+'    For i = 1 To mAllDatabases.Count
+'        DbName = CStr(mAllDatabases(i))
+'
+'        If ContainsText(DbName, SearchText) Then
+'            cmbDatabase.AddItem DbName
+'        End If
+'    Next i
+'
+'    If cmbDatabase.ListCount > 0 Then
+'        cmbDatabase.ListIndex = 0
+'    End If
+'End Sub
 
-Private Sub txtSearchDatabase_Change()
-    If fraDatabaseTable.Enabled Then
-        FilterDatabases
-    End If
-End Sub
+'Private Sub txtSearchDatabase_Change()
+'    If fraDatabaseTable.Enabled Then
+'        FilterDatabases
+'    End If
+'End Sub
 
-Private Sub FilterTables()
-    Dim i As Long
-    Dim TableName As String
-    Dim SearchText As String
-    
-    SearchText = Trim$(txtSearchTable.Text)
-    
-    cmbTable.Clear
-    
-    For i = 1 To mAllTables.Count
-        TableName = CStr(mAllTables(i))
-        
-        If ContainsText(TableName, SearchText) Then
-            cmbTable.AddItem TableName
-        End If
-    Next i
-    
-    If cmbTable.ListCount > 0 Then
-        cmbTable.ListIndex = 0
-    End If
-End Sub
+'Private Sub FilterTables()
+'    Dim i As Long
+'    Dim TableName As String
+'    Dim SearchText As String
+'
+'    SearchText = Trim$(txtSearchTable.Text)
+'
+'    cmbTable.Clear
+'
+'    For i = 1 To mAllTables.Count
+'        TableName = CStr(mAllTables(i))
+'
+'        If ContainsText(TableName, SearchText) Then
+'            cmbTable.AddItem TableName
+'        End If
+'    Next i
+'
+'    If cmbTable.ListCount > 0 Then
+'        cmbTable.ListIndex = 0
+'    End If
+'End Sub
 
-Private Sub txtSearchTable_Change()
-    If fraDatabaseTable.Enabled Then
-        FilterTables
-    End If
-End Sub
+'Private Sub txtSearchTable_Change()
+'    If fraDatabaseTable.Enabled Then
+'        FilterTables
+'    End If
+'End Sub
 
-Private Sub ResetAfterConnectionSettingsChange()
-    On Error Resume Next
-    
-    If Not mSqlConnection Is Nothing Then
-        mSqlConnection.CloseConnection
-    End If
-    
-    cmbDatabase.Clear
-    cmbTable.Clear
-    
-    txtSearchDatabase.Text = ""
-    txtSearchTable.Text = ""
-    
-    Set mAllDatabases = New Collection
-    Set mAllTables = New Collection
-    Set mTargetColumns = New Collection
-    Set mExcelHeaders = New Collection
-    
-    txtExcelFile.Text = ""
-    
-    ResetMappingGridRows
-    ResetExecutionProgress
-    
-    fraDatabaseTable.Enabled = False
-    fraExcel.Enabled = False
-    
-    grdMapping.Enabled = False
-    cmbGridSqlColumns.Visible = False
-    
-    cmdAutoMatch.Enabled = False
-    cmdLoadSavedMapping.Enabled = False
-    cmdSaveMapping.Enabled = False
-    cmdValidateMapping.Enabled = False
-    cmdStartImport.Enabled = False
-    
-    chkDeleteExisting.Value = vbUnchecked
-    chkContinueOnTypeError.Value = vbUnchecked
-    chkContinueOnDuplicate.Value = vbUnchecked
-    
-    chkDeleteExisting.Enabled = False
-    chkContinueOnTypeError.Enabled = False
-    chkContinueOnDuplicate.Enabled = False
-    chkAutoLoadSavedMapping.Enabled = False
-    
-    lblCurrentStep.Caption = "Ready"
-    SetGlobalStatus "Not connected"
-End Sub
+'Private Sub ResetAfterConnectionSettingsChange()
+'    On Error Resume Next
+'
+'    If Not mSqlConnection Is Nothing Then
+'        mSqlConnection.CloseConnection
+'    End If
+'
+'    cmbDatabase.Clear
+'    cmbTable.Clear
+'
+'    txtSearchDatabase.Text = ""
+'    txtSearchTable.Text = ""
+'
+'    Set mAllDatabases = New Collection
+'    Set mAllTables = New Collection
+'    Set mTargetColumns = New Collection
+'    Set mExcelHeaders = New Collection
+'
+'    txtExcelFile.Text = ""
+'
+'    ResetMappingGridRows
+'    ResetExecutionProgress
+'
+'    fraDatabaseTable.Enabled = False
+'    fraExcel.Enabled = False
+'
+'    grdMapping.Enabled = False
+'    cmbGridSqlColumns.Visible = False
+'
+'    cmdAutoMatch.Enabled = False
+'    cmdLoadSavedMapping.Enabled = False
+'    cmdSaveMapping.Enabled = False
+'    cmdValidateMapping.Enabled = False
+'    cmdStartImport.Enabled = False
+'
+'    chkDeleteExisting.Value = vbUnchecked
+'    chkContinueOnTypeError.Value = vbUnchecked
+'    chkContinueOnDuplicate.Value = vbUnchecked
+'
+'    chkDeleteExisting.Enabled = False
+'    chkContinueOnTypeError.Enabled = False
+'    chkContinueOnDuplicate.Enabled = False
+'    chkAutoLoadSavedMapping.Enabled = False
+'
+'    lblCurrentStep.Caption = "Ready"
+'    SetGlobalStatus "Not connected"
+'End Sub
 
-Private Sub txtServerName_Change()
-    If fraDatabaseTable.Enabled Or fraExcel.Enabled Then
-        ResetAfterConnectionSettingsChange
-        AppendStatusMessage "Server name changed. Database and table selections were cleared."
-    End If
-End Sub
+'Private Sub txtServerName_Change()
+'    If fraDatabaseTable.Enabled Or fraExcel.Enabled Then
+'        ResetAfterConnectionSettingsChange
+'        AppendStatusMessage "Server name changed. Database and table selections were cleared."
+'    End If
+'End Sub
 
-Private Sub txtServerName_LostFocus()
-    If fraDatabaseTable.Enabled Then
-        ResetAfterConnectionSettingsChange
-        AppendStatusMessage "Server name changed. Database and table selections were cleared."
-    End If
-End Sub
+'Private Sub txtServerName_LostFocus()
+'    If fraDatabaseTable.Enabled Then
+'        ResetAfterConnectionSettingsChange
+'        AppendStatusMessage "Server name changed. Database and table selections were cleared."
+'    End If
+'End Sub
 
 Private Sub InitializePreviewGrid()
     With grdExcelPreview
@@ -2544,83 +2722,161 @@ Private Function GetSettingsFilePath() As String
     GetSettingsFilePath = GetSettingsFilePath & SETTINGS_FILE_NAME
 End Function
 
-Private Sub SaveConnectionSettings()
-    Dim SettingsFilePath As String
-    
-    SettingsFilePath = GetSettingsFilePath()
-    
-    WriteIniValue SETTINGS_SECTION_CONNECTION, "RememberSettings", IIf(chkRememberConnectionSettings.Value = vbChecked, "1", "0"), SettingsFilePath
-    WriteIniValue SETTINGS_SECTION_CONNECTION, "ServerName", Trim$(txtServerName.Text), SettingsFilePath
-    WriteIniValue SETTINGS_SECTION_CONNECTION, "AuthenticationType", Trim$(cmbAuthentication.Text), SettingsFilePath
-    WriteIniValue SETTINGS_SECTION_CONNECTION, "UserName", Trim$(txtUserName.Text), SettingsFilePath
-    WriteIniValue SETTINGS_SECTION_CONNECTION, "ExcelReadMode", CStr(GetSelectedExcelReadMode()), SettingsFilePath
-End Sub
+'Private Sub SaveConnectionSettings()
+'    Dim SettingsFilePath As String
+'
+'    SettingsFilePath = GetSettingsFilePath()
+'
+'    WriteIniValue SETTINGS_SECTION_CONNECTION, "RememberSettings", IIf(chkRememberConnectionSettings.Value = vbChecked, "1", "0"), SettingsFilePath
+'    WriteIniValue SETTINGS_SECTION_CONNECTION, "ServerName", Trim$(txtServerName.Text), SettingsFilePath
+'    WriteIniValue SETTINGS_SECTION_CONNECTION, "AuthenticationType", Trim$(cmbAuthentication.Text), SettingsFilePath
+'    WriteIniValue SETTINGS_SECTION_CONNECTION, "UserName", Trim$(txtUserName.Text), SettingsFilePath
+'    WriteIniValue SETTINGS_SECTION_CONNECTION, "ExcelReadMode", CStr(GetSelectedExcelReadMode()), SettingsFilePath
+'End Sub
+'
+'Private Sub ClearSavedConnectionSettings()
+'    Dim SettingsFilePath As String
+'
+'    SettingsFilePath = GetSettingsFilePath()
+'
+'    DeleteIniKey SETTINGS_SECTION_CONNECTION, "RememberSettings", SettingsFilePath
+'    DeleteIniKey SETTINGS_SECTION_CONNECTION, "ServerName", SettingsFilePath
+'    DeleteIniKey SETTINGS_SECTION_CONNECTION, "AuthenticationType", SettingsFilePath
+'    DeleteIniKey SETTINGS_SECTION_CONNECTION, "UserName", SettingsFilePath
+'    DeleteIniKey SETTINGS_SECTION_CONNECTION, "ExcelReadMode", SettingsFilePath
+'End Sub
 
-Private Sub ClearSavedConnectionSettings()
-    Dim SettingsFilePath As String
-    
-    SettingsFilePath = GetSettingsFilePath()
-    
-    DeleteIniKey SETTINGS_SECTION_CONNECTION, "RememberSettings", SettingsFilePath
-    DeleteIniKey SETTINGS_SECTION_CONNECTION, "ServerName", SettingsFilePath
-    DeleteIniKey SETTINGS_SECTION_CONNECTION, "AuthenticationType", SettingsFilePath
-    DeleteIniKey SETTINGS_SECTION_CONNECTION, "UserName", SettingsFilePath
-    DeleteIniKey SETTINGS_SECTION_CONNECTION, "ExcelReadMode", SettingsFilePath
-End Sub
+'Private Sub LoadConnectionSettings()
+'    On Error GoTo ErrorHandler
+'
+'    Dim SettingsFilePath As String
+'    Dim RememberValue As String
+'    Dim ServerName As String
+'    Dim AuthenticationType As String
+'    Dim UserName As String
+'    Dim ExcelReadModeText As String
+'
+'    SettingsFilePath = GetSettingsFilePath()
+'
+'    RememberValue = ReadIniValue(SETTINGS_SECTION_CONNECTION, "RememberSettings", "0", SettingsFilePath)
+'
+'    If RememberValue <> "1" Then Exit Sub
+'
+'    chkRememberConnectionSettings.Value = vbChecked
+'
+'    ServerName = ReadIniValue(SETTINGS_SECTION_CONNECTION, "ServerName", "", SettingsFilePath)
+'    AuthenticationType = ReadIniValue(SETTINGS_SECTION_CONNECTION, "AuthenticationType", AUTH_WINDOWS, SettingsFilePath)
+'    UserName = ReadIniValue(SETTINGS_SECTION_CONNECTION, "UserName", "", SettingsFilePath)
+'    ExcelReadModeText = ReadIniValue(SETTINGS_SECTION_CONNECTION, "ExcelReadMode", CStr(EXCEL_READ_MODE_ADO), SettingsFilePath)
+'
+'    txtServerName.Text = ServerName
+'
+'    If StrComp(AuthenticationType, AUTH_SQL_SERVER, vbTextCompare) = 0 Then
+'        cmbAuthentication.ListIndex = 1
+'    Else
+'        cmbAuthentication.ListIndex = 0
+'    End If
+'
+'    UpdateAuthenticationControls
+'
+'    txtUserName.Text = UserName
+'    txtPassword.Text = ""
+'
+'    If Val(ExcelReadModeText) = EXCEL_READ_MODE_AUTOMATION Then
+'        optReadByExcel.Value = True
+'        optReadByAdo.Value = False
+'    Else
+'        optReadByAdo.Value = True
+'        optReadByExcel.Value = False
+'    End If
+'
+'    Exit Sub
+'
+'ErrorHandler:
+'    chkRememberConnectionSettings.Value = vbUnchecked
+'End Sub
 
-Private Sub LoadConnectionSettings()
+'Private Sub chkRememberConnectionSettings_Click()
+'    If chkRememberConnectionSettings.Value = vbUnchecked Then
+'        ClearSavedConnectionSettings
+'        AppendStatusMessage "Saved connection settings were cleared."
+'    End If
+'End Sub
+
+'Private Sub ApplyAppContextToImportForm()
+'    EnsureImportObjects
+'
+'    lblConnectionInfo.Caption = gAppContext.ServerName
+'    lblDatabaseInfo.Caption = gAppContext.SelectedDatabase
+'    lblTableInfo.Caption = gAppContext.GetFullTargetName()
+'End Sub
+
+Private Function GetActiveConnection() As ADODB.Connection
     On Error GoTo ErrorHandler
     
-    Dim SettingsFilePath As String
-    Dim RememberValue As String
-    Dim ServerName As String
-    Dim AuthenticationType As String
-    Dim UserName As String
-    Dim ExcelReadModeText As String
-    
-    SettingsFilePath = GetSettingsFilePath()
-    
-    RememberValue = ReadIniValue(SETTINGS_SECTION_CONNECTION, "RememberSettings", "0", SettingsFilePath)
-    
-    If RememberValue <> "1" Then Exit Sub
-    
-    chkRememberConnectionSettings.Value = vbChecked
-    
-    ServerName = ReadIniValue(SETTINGS_SECTION_CONNECTION, "ServerName", "", SettingsFilePath)
-    AuthenticationType = ReadIniValue(SETTINGS_SECTION_CONNECTION, "AuthenticationType", AUTH_WINDOWS, SettingsFilePath)
-    UserName = ReadIniValue(SETTINGS_SECTION_CONNECTION, "UserName", "", SettingsFilePath)
-    ExcelReadModeText = ReadIniValue(SETTINGS_SECTION_CONNECTION, "ExcelReadMode", CStr(EXCEL_READ_MODE_ADO), SettingsFilePath)
-    
-    txtServerName.Text = ServerName
-    
-    If StrComp(AuthenticationType, AUTH_SQL_SERVER, vbTextCompare) = 0 Then
-        cmbAuthentication.ListIndex = 1
-    Else
-        cmbAuthentication.ListIndex = 0
+    If frmMain Is Nothing Then
+        Set GetActiveConnection = Nothing
+        Exit Function
     End If
     
-    UpdateAuthenticationControls
+    If frmMain.SqlConnectionManager Is Nothing Then
+        Set GetActiveConnection = Nothing
+        Exit Function
+    End If
     
-    txtUserName.Text = UserName
-    txtPassword.Text = ""
+    If frmMain.SqlConnectionManager.Connection Is Nothing Then
+        Set GetActiveConnection = Nothing
+        Exit Function
+    End If
     
-    If Val(ExcelReadModeText) = EXCEL_READ_MODE_AUTOMATION Then
-        optReadByExcel.Value = True
-        optReadByAdo.Value = False
-    Else
-        optReadByAdo.Value = True
-        optReadByExcel.Value = False
+    Set GetActiveConnection = frmMain.SqlConnectionManager.Connection
+    Exit Function
+
+ErrorHandler:
+    Set GetActiveConnection = Nothing
+End Function
+
+Private Sub ApplyAppContextToImportForm()
+    lblConnectionInfo.Caption = gAppContext.ServerName
+    lblDatabaseInfo.Caption = gAppContext.SelectedDatabase
+    lblTableInfo.Caption = gAppContext.GetFullTargetName()
+End Sub
+
+Private Sub LoadTargetTableStructureFromContext()
+    On Error GoTo ErrorHandler
+    
+    Dim Conn As ADODB.Connection
+    
+    Set Conn = GetActiveConnection()
+    
+    If Conn Is Nothing Then
+        MsgBox "No active database connection is available.", vbExclamation, APP_NAME
+        Exit Sub
+    End If
+    
+    Set mTargetColumns = mDatabaseBrowser.GetTableColumns( _
+        Conn, _
+        gAppContext.SelectedDatabase, _
+        gAppContext.SelectedSchema, _
+        gAppContext.SelectedTable)
+    
+    If Not mMappingManager Is Nothing Then
+        mMappingManager.EnsureMappingTableExists Conn, gAppContext.SelectedDatabase
     End If
     
     Exit Sub
 
 ErrorHandler:
-    chkRememberConnectionSettings.Value = vbUnchecked
+    MsgBox "Failed to load target table structure." & vbCrLf & _
+           Err.Number & " - " & Err.Description, vbCritical, APP_NAME
 End Sub
 
-Private Sub chkRememberConnectionSettings_Click()
-    If chkRememberConnectionSettings.Value = vbUnchecked Then
-        ClearSavedConnectionSettings
-        AppendStatusMessage "Saved connection settings were cleared."
-    End If
+Private Sub EnsureImportObjects()
+    If mExcelReader Is Nothing Then Set mExcelReader = New clsExcelReader
+    If mMappingManager Is Nothing Then Set mMappingManager = New clsMappingManager
+    If mStagingManager Is Nothing Then Set mStagingManager = New clsStagingManager
+    If mImportEngine Is Nothing Then Set mImportEngine = New clsImportEngine
+    If mDatabaseBrowser Is Nothing Then Set mDatabaseBrowser = New clsDatabaseBrowser
+    If mTargetColumns Is Nothing Then Set mTargetColumns = New Collection
+    If mExcelHeaders Is Nothing Then Set mExcelHeaders = New Collection
 End Sub
