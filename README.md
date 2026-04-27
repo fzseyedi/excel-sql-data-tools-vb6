@@ -222,6 +222,7 @@ Before running on another machine, verify that the following are available:
 - Microsoft Jet/ACE OLEDB provider for `.xls` export using ADO/OLEDB
 
 CSV export does **not** require Microsoft Excel.
+For detailed installation and runtime dependency notes, see [INSTALL.md](INSTALL.md).
 
 ---
 
