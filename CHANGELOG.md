@@ -2,6 +2,50 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 2026-04-27
+
+### Added
+
+- Added a new main form (`frmMain`) to manage shared SQL Server connection, database selection, table selection, and tool launching.
+- Added a new Export tool form (`frmExportSqlToExcel`).
+- Added support for exporting one or more SQL Server tables.
+- Added checkbox-based table selection for export.
+- Added checkbox-based field selection per selected table.
+- Added default table selection in Export form based on the table selected in the main form.
+- Added table search support in the Export form.
+- Added right-click context menu for selecting all or none in table and field lists.
+- Added CSV export support.
+- Added Excel export support:
+  - `.xlsx` export using Excel Automation when Microsoft Excel is installed.
+  - `.xls` export using ADO/OLEDB when Excel is not installed but the required provider is available.
+- Added export output folder selection.
+- Added overwrite confirmation for existing output files.
+- Added export progress tracking.
+- Added export cancel support.
+
+### Changed
+
+- Refactored the Import form to use the shared application context from `frmMain`.
+- Moved SQL Server connection, database selection, and table selection responsibilities out of the Import form.
+- Improved separation between shared application state and Import-specific workflow.
+- Improved Import summary counts so staging and final target import counts are no longer mixed.
+- Improved Export UI behavior so field selections are preserved when switching or searching tables.
+- Improved Export UI behavior so the Cancel button remains clickable during export.
+
+### Fixed
+
+- Fixed incorrect Import success count where staging and target import counts were combined.
+- Fixed field selection reset issues when searching and reselecting tables in the Export form.
+- Fixed right-click “Select None” behavior for field selection.
+- Fixed Export cancel button becoming unavailable during long-running export operations.
+- Fixed UI container issue where disabling a parent frame prevented the Cancel button from being clicked.
+
+### Notes
+
+- CSV export is the most portable output option and does not require Microsoft Excel.
+- Excel `.xlsx` export requires Microsoft Excel.
+- Excel `.xls` export can work without Microsoft Excel when the required ADO/OLEDB provider is available.
+
 ## [1.1.0] - 2026-04-24
 
 ### Added
