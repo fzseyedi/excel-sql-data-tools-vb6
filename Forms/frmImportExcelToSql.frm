@@ -35,7 +35,7 @@ Begin VB.Form frmImportExcelToSql
    Begin TabDlg.SSTab sstMain 
       Height          =   6615
       Left            =   120
-      TabIndex        =   18
+      TabIndex        =   7
       Top             =   1560
       Width           =   14655
       _ExtentX        =   25850
@@ -46,14 +46,14 @@ Begin VB.Form frmImportExcelToSql
       TabCaption(0)   =   "Mapping"
       TabPicture(0)   =   "frmImportExcelToSql.frx":0000
       Tab(0).ControlEnabled=   0   'False
-      Tab(0).Control(0)=   "lblExcelPreview"
-      Tab(0).Control(1)=   "grdMapping"
-      Tab(0).Control(2)=   "cmdAutoMatch"
-      Tab(0).Control(3)=   "cmdLoadSavedMapping"
-      Tab(0).Control(4)=   "cmdSaveMapping"
-      Tab(0).Control(5)=   "cmdValidateMapping"
-      Tab(0).Control(6)=   "cmbGridSqlColumns"
-      Tab(0).Control(7)=   "grdExcelPreview"
+      Tab(0).Control(0)=   "grdExcelPreview"
+      Tab(0).Control(1)=   "cmbGridSqlColumns"
+      Tab(0).Control(2)=   "cmdValidateMapping"
+      Tab(0).Control(3)=   "cmdSaveMapping"
+      Tab(0).Control(4)=   "cmdLoadSavedMapping"
+      Tab(0).Control(5)=   "cmdAutoMatch"
+      Tab(0).Control(6)=   "grdMapping"
+      Tab(0).Control(7)=   "lblExcelPreview"
       Tab(0).ControlCount=   8
       TabCaption(1)   =   "Import Options"
       TabPicture(1)   =   "frmImportExcelToSql.frx":001C
@@ -69,7 +69,7 @@ Begin VB.Form frmImportExcelToSql
       Begin MSFlexGridLib.MSFlexGrid grdExcelPreview 
          Height          =   1935
          Left            =   -74880
-         TabIndex        =   20
+         TabIndex        =   9
          Top             =   4200
          Width           =   14415
          _ExtentX        =   25426
@@ -89,7 +89,7 @@ Begin VB.Form frmImportExcelToSql
          Height          =   360
          Left            =   -66840
          Style           =   2  'Dropdown List
-         TabIndex        =   57
+         TabIndex        =   39
          Top             =   6150
          Visible         =   0   'False
          Width           =   3855
@@ -106,7 +106,7 @@ Begin VB.Form frmImportExcelToSql
          EndProperty
          Height          =   6135
          Left            =   120
-         TabIndex        =   30
+         TabIndex        =   19
          Top             =   360
          Width           =   14415
          Begin VB.CommandButton cmdCancelImport 
@@ -114,7 +114,7 @@ Begin VB.Form frmImportExcelToSql
             Enabled         =   0   'False
             Height          =   360
             Left            =   1920
-            TabIndex        =   32
+            TabIndex        =   21
             Top             =   360
             Width           =   1590
          End
@@ -124,14 +124,14 @@ Begin VB.Form frmImportExcelToSql
             Locked          =   -1  'True
             MultiLine       =   -1  'True
             ScrollBars      =   2  'Vertical
-            TabIndex        =   35
+            TabIndex        =   24
             Top             =   3480
             Width           =   13935
          End
          Begin MSComctlLib.ProgressBar prgImport 
             Height          =   375
             Left            =   240
-            TabIndex        =   34
+            TabIndex        =   23
             Top             =   840
             Width           =   14055
             _ExtentX        =   24791
@@ -144,7 +144,7 @@ Begin VB.Form frmImportExcelToSql
             Caption         =   "Exit"
             Height          =   360
             Left            =   12720
-            TabIndex        =   33
+            TabIndex        =   22
             Top             =   360
             Width           =   1590
          End
@@ -152,7 +152,7 @@ Begin VB.Form frmImportExcelToSql
             Caption         =   "Start Import"
             Height          =   360
             Left            =   240
-            TabIndex        =   31
+            TabIndex        =   20
             Top             =   360
             Width           =   1590
          End
@@ -163,7 +163,7 @@ Begin VB.Form frmImportExcelToSql
             ForeColor       =   &H000000FF&
             Height          =   315
             Left            =   1680
-            TabIndex        =   54
+            TabIndex        =   36
             Top             =   3120
             Width           =   2190
          End
@@ -174,7 +174,7 @@ Begin VB.Form frmImportExcelToSql
             ForeColor       =   &H000000FF&
             Height          =   240
             Left            =   360
-            TabIndex        =   53
+            TabIndex        =   35
             Top             =   3150
             Width           =   525
          End
@@ -184,7 +184,7 @@ Begin VB.Form frmImportExcelToSql
             Caption         =   "0"
             Height          =   315
             Left            =   1680
-            TabIndex        =   52
+            TabIndex        =   34
             Top             =   2685
             Width           =   2190
          End
@@ -193,7 +193,7 @@ Begin VB.Form frmImportExcelToSql
             Caption         =   "Skipped"
             Height          =   315
             Left            =   360
-            TabIndex        =   51
+            TabIndex        =   33
             Top             =   2685
             Width           =   990
          End
@@ -203,7 +203,7 @@ Begin VB.Form frmImportExcelToSql
             Caption         =   "0"
             Height          =   315
             Left            =   1680
-            TabIndex        =   50
+            TabIndex        =   32
             Top             =   2205
             Width           =   2190
          End
@@ -213,7 +213,7 @@ Begin VB.Form frmImportExcelToSql
             Caption         =   "Succes"
             Height          =   240
             Left            =   360
-            TabIndex        =   49
+            TabIndex        =   31
             Top             =   2235
             Width           =   600
          End
@@ -223,7 +223,7 @@ Begin VB.Form frmImportExcelToSql
             Caption         =   "0 / 0"
             Height          =   315
             Left            =   1680
-            TabIndex        =   48
+            TabIndex        =   30
             Top             =   1770
             Width           =   2175
          End
@@ -233,7 +233,7 @@ Begin VB.Form frmImportExcelToSql
             Caption         =   "Row Progress"
             Height          =   240
             Left            =   360
-            TabIndex        =   47
+            TabIndex        =   29
             Top             =   1770
             Width           =   1185
          End
@@ -243,7 +243,7 @@ Begin VB.Form frmImportExcelToSql
             Caption         =   "Ready"
             Height          =   315
             Left            =   1680
-            TabIndex        =   46
+            TabIndex        =   28
             Top             =   1320
             Width           =   12615
          End
@@ -253,7 +253,7 @@ Begin VB.Form frmImportExcelToSql
             Caption         =   "Current Step"
             Height          =   240
             Left            =   360
-            TabIndex        =   45
+            TabIndex        =   27
             Top             =   1320
             Width           =   1095
          End
@@ -270,14 +270,14 @@ Begin VB.Form frmImportExcelToSql
          EndProperty
          Height          =   6135
          Left            =   -74880
-         TabIndex        =   25
+         TabIndex        =   14
          Top             =   360
          Width           =   14415
          Begin VB.CheckBox chkAutoLoadSavedMapping 
             Caption         =   "Auto load saved mapping if available"
             Height          =   495
             Left            =   240
-            TabIndex        =   29
+            TabIndex        =   18
             Top             =   1800
             Width           =   3615
          End
@@ -285,7 +285,7 @@ Begin VB.Form frmImportExcelToSql
             Caption         =   "Continue on duplicate rows"
             Height          =   495
             Left            =   240
-            TabIndex        =   28
+            TabIndex        =   17
             Top             =   1320
             Width           =   3615
          End
@@ -293,7 +293,7 @@ Begin VB.Form frmImportExcelToSql
             Caption         =   "Continue on data type errors"
             Height          =   495
             Left            =   240
-            TabIndex        =   27
+            TabIndex        =   16
             Top             =   840
             Width           =   3615
          End
@@ -301,7 +301,7 @@ Begin VB.Form frmImportExcelToSql
             Caption         =   "Delete exisiting rows before import"
             Height          =   495
             Left            =   240
-            TabIndex        =   26
+            TabIndex        =   15
             Top             =   360
             Width           =   3615
          End
@@ -311,7 +311,7 @@ Begin VB.Form frmImportExcelToSql
             Caption         =   "These options effect how import errors and saved mappings are handled."
             Height          =   240
             Left            =   240
-            TabIndex        =   44
+            TabIndex        =   26
             Top             =   2520
             Width           =   6315
          End
@@ -320,7 +320,7 @@ Begin VB.Form frmImportExcelToSql
          Caption         =   "Validate Mapping"
          Height          =   360
          Left            =   -70800
-         TabIndex        =   23
+         TabIndex        =   12
          Top             =   6150
          Width           =   1830
       End
@@ -328,7 +328,7 @@ Begin VB.Form frmImportExcelToSql
          Caption         =   "Save Mapping"
          Height          =   360
          Left            =   -68880
-         TabIndex        =   24
+         TabIndex        =   13
          Top             =   6150
          Width           =   1830
       End
@@ -336,7 +336,7 @@ Begin VB.Form frmImportExcelToSql
          Caption         =   "Load Saved Mapping"
          Height          =   360
          Left            =   -72960
-         TabIndex        =   22
+         TabIndex        =   11
          Top             =   6150
          Width           =   2070
       End
@@ -344,14 +344,14 @@ Begin VB.Form frmImportExcelToSql
          Caption         =   "Auto Match"
          Height          =   360
          Left            =   -74880
-         TabIndex        =   21
+         TabIndex        =   10
          Top             =   6150
          Width           =   1830
       End
       Begin MSFlexGridLib.MSFlexGrid grdMapping 
          Height          =   3495
          Left            =   -74880
-         TabIndex        =   19
+         TabIndex        =   8
          Top             =   480
          Width           =   14415
          _ExtentX        =   25426
@@ -384,7 +384,7 @@ Begin VB.Form frmImportExcelToSql
          EndProperty
          Height          =   195
          Left            =   -74880
-         TabIndex        =   60
+         TabIndex        =   40
          Top             =   3960
          Width           =   1860
       End
@@ -402,41 +402,51 @@ Begin VB.Form frmImportExcelToSql
       EndProperty
       Height          =   1335
       Left            =   120
-      TabIndex        =   12
+      TabIndex        =   6
       Top             =   120
       Width           =   14655
+      Begin VB.ComboBox cmbImportSourceType 
+         Height          =   360
+         ItemData        =   "frmImportExcelToSql.frx":0054
+         Left            =   120
+         List            =   "frmImportExcelToSql.frx":0056
+         Style           =   2  'Dropdown List
+         TabIndex        =   0
+         Top             =   720
+         Width           =   2895
+      End
       Begin VB.OptionButton optReadByExcel 
          Caption         =   "Read via Excel Automation"
          Height          =   375
          Left            =   9720
-         TabIndex        =   16
-         Top             =   600
+         TabIndex        =   4
+         Top             =   720
          Value           =   -1  'True
          Width           =   2655
       End
       Begin VB.OptionButton optReadByAdo 
          Caption         =   "Read via ADO/OLEDB"
          Height          =   375
-         Left            =   7440
-         TabIndex        =   15
-         Top             =   600
+         Left            =   9720
+         TabIndex        =   3
+         Top             =   240
          Width           =   2175
       End
       Begin VB.CommandButton cmdLoadExcelColumns 
          Caption         =   "Load Excel Columns"
          Height          =   360
-         Left            =   12720
-         TabIndex        =   17
-         Top             =   600
-         Width           =   1830
+         Left            =   12480
+         TabIndex        =   5
+         Top             =   700
+         Width           =   2070
       End
       Begin VB.CommandButton cmdBrowseExcel 
-         Caption         =   "Browse"
+         Caption         =   "Browse Excel..."
          Height          =   360
-         Left            =   4440
-         TabIndex        =   14
+         Left            =   7800
+         TabIndex        =   2
          Top             =   700
-         Width           =   990
+         Width           =   1710
       End
       Begin VB.TextBox txtExcelFile 
          BeginProperty Font 
@@ -449,15 +459,25 @@ Begin VB.Form frmImportExcelToSql
             Strikethrough   =   0   'False
          EndProperty
          Height          =   375
-         Left            =   240
-         TabIndex        =   13
+         Left            =   3360
+         TabIndex        =   1
          Top             =   700
-         Width           =   4215
+         Width           =   4455
+      End
+      Begin VB.Label lblImportSourceType 
+         AutoSize        =   -1  'True
+         BackStyle       =   0  'Transparent
+         Caption         =   "Import Source:"
+         Height          =   240
+         Left            =   120
+         TabIndex        =   47
+         Top             =   360
+         Width           =   1305
       End
       Begin VB.Label lblExcelFile 
          AutoSize        =   -1  'True
          BackStyle       =   0  'Transparent
-         Caption         =   "Excel File"
+         Caption         =   "Source File"
          BeginProperty Font 
             Name            =   "Tahoma"
             Size            =   8.25
@@ -468,211 +488,10 @@ Begin VB.Form frmImportExcelToSql
             Strikethrough   =   0   'False
          EndProperty
          Height          =   195
-         Left            =   240
-         TabIndex        =   43
+         Left            =   3360
+         TabIndex        =   25
          Top             =   360
-         Width           =   690
-      End
-   End
-   Begin VB.Frame fraDatabaseTable 
-      Caption         =   "Database and Table Selection"
-      BeginProperty Font 
-         Name            =   "Tahoma"
-         Size            =   8.25
-         Charset         =   178
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   2520
-      Left            =   5400
-      TabIndex        =   6
-      Top             =   -120
-      Visible         =   0   'False
-      Width           =   4575
-      Begin VB.TextBox txtSearchTable 
-         Height          =   375
-         Left            =   1680
-         TabIndex        =   10
-         Top             =   1560
-         Width           =   2775
-      End
-      Begin VB.TextBox txtSearchDatabase 
-         Height          =   375
-         Left            =   1680
-         TabIndex        =   7
-         Top             =   360
-         Width           =   2775
-      End
-      Begin VB.CommandButton cmdLoadTables 
-         Caption         =   "Load Tables"
-         Height          =   360
-         Left            =   2850
-         TabIndex        =   9
-         Top             =   1140
-         Width           =   1590
-      End
-      Begin VB.ComboBox cmbTable 
-         Height          =   360
-         Left            =   1680
-         Style           =   2  'Dropdown List
-         TabIndex        =   11
-         Top             =   2040
-         Width           =   2775
-      End
-      Begin VB.ComboBox cmbDatabase 
-         Height          =   360
-         Left            =   1680
-         Style           =   2  'Dropdown List
-         TabIndex        =   8
-         Top             =   780
-         Width           =   2775
-      End
-      Begin VB.Label lblSearchTable 
-         AutoSize        =   -1  'True
-         BackStyle       =   0  'Transparent
-         Caption         =   "Search Table"
-         Height          =   240
-         Left            =   120
-         TabIndex        =   59
-         Top             =   1560
-         Width           =   1140
-      End
-      Begin VB.Label lblSearchDatabase 
-         AutoSize        =   -1  'True
-         BackStyle       =   0  'Transparent
-         Caption         =   "Search Database"
-         Height          =   240
-         Left            =   120
-         TabIndex        =   58
-         Top             =   360
-         Width           =   1455
-      End
-      Begin VB.Label lblTable 
-         AutoSize        =   -1  'True
-         BackStyle       =   0  'Transparent
-         Caption         =   "Table"
-         Height          =   240
-         Left            =   120
-         TabIndex        =   42
-         Top             =   2040
-         Width           =   480
-      End
-      Begin VB.Label lblDatabase 
-         AutoSize        =   -1  'True
-         BackStyle       =   0  'Transparent
-         Caption         =   "Database"
-         Height          =   240
-         Left            =   120
-         TabIndex        =   41
-         Top             =   780
-         Width           =   795
-      End
-   End
-   Begin VB.Frame FraConnection 
-      Caption         =   "SQL Server Connection"
-      BeginProperty Font 
-         Name            =   "Tahoma"
-         Size            =   8.25
-         Charset         =   178
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   2520
-      Left            =   120
-      TabIndex        =   36
-      Top             =   -120
-      Visible         =   0   'False
-      Width           =   5175
-      Begin VB.CheckBox chkRememberConnectionSettings 
-         Caption         =   "Remember connection settings"
-         Height          =   375
-         Left            =   240
-         TabIndex        =   4
-         Top             =   2040
-         Width           =   3015
-      End
-      Begin VB.CommandButton cmdConnect 
-         Caption         =   "Connect"
-         Height          =   360
-         Left            =   3465
-         TabIndex        =   5
-         Top             =   2040
-         Width           =   1590
-      End
-      Begin VB.ComboBox cmbAuthentication 
-         Height          =   360
-         Left            =   1680
-         Style           =   2  'Dropdown List
-         TabIndex        =   1
-         Top             =   780
-         Width           =   3375
-      End
-      Begin VB.TextBox txtPassword 
-         Height          =   375
-         IMEMode         =   3  'DISABLE
-         Left            =   1680
-         PasswordChar    =   "*"
-         TabIndex        =   3
-         Top             =   1560
-         Width           =   3375
-      End
-      Begin VB.TextBox txtUserName 
-         Height          =   375
-         Left            =   1680
-         TabIndex        =   2
-         Top             =   1140
-         Width           =   3375
-      End
-      Begin VB.TextBox txtServerName 
-         Height          =   375
-         Left            =   1680
-         TabIndex        =   0
-         Top             =   360
-         Width           =   3375
-      End
-      Begin VB.Label lblAuthentication 
-         AutoSize        =   -1  'True
-         BackStyle       =   0  'Transparent
-         Caption         =   "Authentication"
-         Height          =   240
-         Left            =   240
-         TabIndex        =   40
-         Top             =   780
-         Width           =   1215
-      End
-      Begin VB.Label lblPassword 
-         AutoSize        =   -1  'True
-         BackStyle       =   0  'Transparent
-         Caption         =   "Password"
-         Height          =   240
-         Left            =   240
-         TabIndex        =   39
-         Top             =   1560
-         Width           =   825
-      End
-      Begin VB.Label lblUserName 
-         AutoSize        =   -1  'True
-         BackStyle       =   0  'Transparent
-         Caption         =   "User Name"
-         Height          =   240
-         Left            =   240
-         TabIndex        =   38
-         Top             =   1140
-         Width           =   945
-      End
-      Begin VB.Label lblLblServerName 
-         AutoSize        =   -1  'True
-         BackStyle       =   0  'Transparent
-         Caption         =   "Server Name"
-         Height          =   240
-         Left            =   240
-         TabIndex        =   37
-         Top             =   360
-         Width           =   1125
+         Width           =   780
       End
    End
    Begin VB.Label lblTableInfo 
@@ -682,7 +501,7 @@ Begin VB.Form frmImportExcelToSql
       ForeColor       =   &H00FF0000&
       Height          =   345
       Left            =   10920
-      TabIndex        =   66
+      TabIndex        =   46
       Top             =   8220
       Width           =   3855
    End
@@ -692,7 +511,7 @@ Begin VB.Form frmImportExcelToSql
       Caption         =   "Table :"
       Height          =   240
       Left            =   10200
-      TabIndex        =   65
+      TabIndex        =   45
       Top             =   8220
       Width           =   615
    End
@@ -703,7 +522,7 @@ Begin VB.Form frmImportExcelToSql
       ForeColor       =   &H00FF0000&
       Height          =   345
       Left            =   6120
-      TabIndex        =   64
+      TabIndex        =   44
       Top             =   8220
       Width           =   3855
    End
@@ -713,7 +532,7 @@ Begin VB.Form frmImportExcelToSql
       Caption         =   "Database :"
       Height          =   240
       Left            =   5040
-      TabIndex        =   63
+      TabIndex        =   43
       Top             =   8220
       Width           =   930
    End
@@ -724,7 +543,7 @@ Begin VB.Form frmImportExcelToSql
       ForeColor       =   &H00FF0000&
       Height          =   345
       Left            =   1080
-      TabIndex        =   62
+      TabIndex        =   42
       Top             =   8220
       Width           =   3855
    End
@@ -734,7 +553,7 @@ Begin VB.Form frmImportExcelToSql
       Caption         =   "Server :"
       Height          =   240
       Left            =   120
-      TabIndex        =   61
+      TabIndex        =   41
       Top             =   8220
       Width           =   705
    End
@@ -745,7 +564,7 @@ Begin VB.Form frmImportExcelToSql
       ForeColor       =   &H00FF0000&
       Height          =   345
       Left            =   1080
-      TabIndex        =   56
+      TabIndex        =   38
       Top             =   8595
       Width           =   13695
    End
@@ -755,7 +574,7 @@ Begin VB.Form frmImportExcelToSql
       Caption         =   "Status  :"
       Height          =   240
       Left            =   120
-      TabIndex        =   55
+      TabIndex        =   37
       Top             =   8595
       Width           =   735
    End
@@ -769,21 +588,21 @@ Option Explicit
 
 Private Const SETTINGS_FILE_NAME As String = "AppSettings.ini"
 Private Const SETTINGS_SECTION_CONNECTION As String = "Connection"
+Private Const IMPORT_SOURCE_EXCEL As String = "Excel"
+Private Const IMPORT_SOURCE_CSV As String = "CSV"
 
-'Private mSqlConnection As clsSqlServerConnection
 Private mDatabaseBrowser As clsDatabaseBrowser
 Private mMappingManager As clsMappingManager
 Private mTargetColumns As Collection
 Private mExcelReader As clsExcelReader
-Private mExcelHeaders As Collection
+Private mSourceHeaders As Collection
 Private mCurrentGridRow As Long
 Private mCurrentGridCol As Long
 Private mImportLogger As clsImportLogger
 Private mStagingManager As clsStagingManager
 Private mImportEngine As clsImportEngine
-'Private mAllDatabases As Collection
-'Private mAllTables As Collection
 Private mCancelRequested As Boolean
+Private mCsvReader As clsCsvReader
 
 Private Sub cmbGridSqlColumns_Click()
     Dim SelectedSqlColumn As String
@@ -849,28 +668,38 @@ Private Sub cmbGridSqlColumns_LostFocus()
     End If
 End Sub
 
+Private Sub cmbImportSourceType_Click()
+    On Error GoTo ErrorHandler
+    
+    UpdateImportSourceUi
+    ResetSourceFileState
+    
+    Exit Sub
+
+ErrorHandler:
+    MsgBox "Error changing import source type." & vbCrLf & _
+           Err.Number & " - " & Err.Description, vbExclamation, APP_NAME
+End Sub
+
 Private Sub cmdAutoMatch_Click()
     On Error GoTo ErrorHandler
     
     Dim Mappings As Collection
     
-    If mExcelHeaders Is Nothing Then Exit Sub
+    If mSourceHeaders Is Nothing Then Exit Sub
     If mTargetColumns Is Nothing Then Exit Sub
     
     SetGlobalStatus "Running auto match..."
     AppendStatusMessage "Running auto match..."
     DoEvents
     
-    Set Mappings = mMappingManager.AutoMatch(mExcelHeaders, mTargetColumns)
+    Set Mappings = mMappingManager.AutoMatch(mSourceHeaders, mTargetColumns)
     ApplyMappingsToGrid Mappings
     Call ValidateNoDuplicateSqlMappings
     
     AppendStatusMessage "Auto match completed."
     SetGlobalStatus "Auto match completed"
     cmdValidateMapping_Click
-    
-    '''AppendStatusMessage "Please click Validate Mapping button to enable Start Import button in Execution tab."
-    '''MsgBox "Please click Validate Mapping button to enable Start Import button in Execution tab."
     
     Exit Sub
 
@@ -882,7 +711,61 @@ End Sub
 Private Sub cmdBrowseExcel_Click()
     On Error GoTo ErrorHandler
     
-    Set mExcelHeaders = New Collection
+    Dim SourceType As String
+    Dim SelectedFile As String
+    
+    SourceType = GetSelectedImportSourceType()
+    
+    ResetImportFileSelectionState
+    
+    dlgExcelFile.CancelError = True
+    
+    If SourceType = IMPORT_SOURCE_CSV Then
+        dlgExcelFile.DialogTitle = "Select CSV File"
+        dlgExcelFile.Filter = "CSV Files (*.csv)|*.csv|All Files (*.*)|*.*"
+        dlgExcelFile.DefaultExt = "csv"
+    Else
+        dlgExcelFile.DialogTitle = "Select Excel File"
+        dlgExcelFile.Filter = "Excel Files (*.xls;*.xlsx)|*.xls;*.xlsx|Excel 97-2003 Workbook (*.xls)|*.xls|Excel Workbook (*.xlsx)|*.xlsx|All Files (*.*)|*.*"
+        dlgExcelFile.DefaultExt = "xlsx"
+    End If
+    
+    dlgExcelFile.FileName = ""
+    dlgExcelFile.ShowOpen
+    
+    SelectedFile = Trim$(dlgExcelFile.FileName)
+    
+    If Len(SelectedFile) > 0 Then
+        txtExcelFile.Text = SelectedFile
+        
+        ResetImportFileSelectionState
+        ResetPreviewGrid
+        
+        If SourceType = IMPORT_SOURCE_CSV Then
+            SetGlobalStatus "CSV file selected"
+            AppendStatusMessage "CSV file selected: " & SelectedFile
+        Else
+            SetGlobalStatus "Excel file selected"
+            AppendStatusMessage "Excel file selected: " & SelectedFile
+        End If
+    End If
+    
+    Exit Sub
+
+ErrorHandler:
+    If Err.Number <> 32755 Then
+        If SourceType = IMPORT_SOURCE_CSV Then
+            AppendStatusMessage "Error selecting CSV file: " & Err.Description
+            MsgBox "Error selecting CSV file." & vbCrLf & Err.Number & " - " & Err.Description, vbCritical, APP_NAME
+        Else
+            AppendStatusMessage "Error selecting Excel file: " & Err.Description
+            MsgBox "Error selecting Excel file." & vbCrLf & Err.Number & " - " & Err.Description, vbCritical, APP_NAME
+        End If
+    End If
+End Sub
+
+Private Sub ResetImportFileSelectionState()
+    Set mSourceHeaders = New Collection
     ResetMappingGridRows
     
     grdMapping.Enabled = False
@@ -898,45 +781,6 @@ Private Sub cmdBrowseExcel_Click()
     chkAutoLoadSavedMapping.Enabled = False
     
     ResetExecutionProgress
-    
-    dlgExcelFile.CancelError = True
-    dlgExcelFile.DialogTitle = "Select Excel File"
-    dlgExcelFile.Filter = "Excel Files (*.xls;*.xlsx)|*.xls;*.xlsx|Excel 97-2003 Workbook (*.xls)|*.xls|Excel Workbook (*.xlsx)|*.xlsx|All Files (*.*)|*.*"
-    dlgExcelFile.FileName = ""
-    dlgExcelFile.ShowOpen
-    
-    If Len(Trim$(dlgExcelFile.FileName)) > 0 Then
-        txtExcelFile.Text = dlgExcelFile.FileName
-        
-        Set mExcelHeaders = New Collection
-        ResetMappingGridRows
-        
-        grdMapping.Enabled = False
-        cmdAutoMatch.Enabled = False
-        cmdLoadSavedMapping.Enabled = False
-        cmdSaveMapping.Enabled = False
-        cmdValidateMapping.Enabled = False
-        cmdStartImport.Enabled = False
-        
-        chkDeleteExisting.Enabled = False
-        chkContinueOnTypeError.Enabled = False
-        chkContinueOnDuplicate.Enabled = False
-        chkAutoLoadSavedMapping.Enabled = False
-        
-        ResetExecutionProgress
-        ResetPreviewGrid
-        
-        SetGlobalStatus "Excel file selected"
-        AppendStatusMessage "Excel file selected: " & dlgExcelFile.FileName
-    End If
-    
-    Exit Sub
-
-ErrorHandler:
-    If Err.Number <> 32755 Then
-        AppendStatusMessage "Error selecting Excel file: " & Err.Description
-        MsgBox "Error selecting Excel file." & vbCrLf & Err.Number & " - " & Err.Description, vbCritical, APP_NAME
-    End If
 End Sub
 
 Private Sub cmdCancelImport_Click()
@@ -951,22 +795,24 @@ End Sub
 Private Sub cmdLoadExcelColumns_Click()
     On Error GoTo ErrorHandler
     
+    Dim SourceName As String
+    
+    SourceName = GetImportSourceDisplayName()
+    
     Screen.MousePointer = vbHourglass
-    SetGlobalStatus "Loading Excel headers..."
-    AppendStatusMessage "Loading Excel headers..."
+    SetGlobalStatus "Loading " & SourceName & " headers..."
+    AppendStatusMessage "Loading " & SourceName & " headers..."
     DoEvents
     
-    If Not ValidateExcelSelectionInputs() Then
+    If Not ValidateImportSourceSelectionInputs() Then
         GoTo SafeExit
     End If
     
-    mExcelReader.ReadMode = GetSelectedExcelReadMode()
+    Set mSourceHeaders = LoadSourceHeaders(Trim$(txtExcelFile.Text))
     
-    Set mExcelHeaders = mExcelReader.LoadHeaders(Trim$(txtExcelFile.Text))
-    
-    PopulateMappingGridFromExcelHeaders
-    LoadExcelPreview
-    SetExcelHeadersLoadedState
+    PopulateMappingGridFromSourceHeaders
+    LoadSourcePreview
+    SetSourceHeadersLoadedState
     
     If chkAutoLoadSavedMapping.Value = vbChecked Then
         On Error Resume Next
@@ -974,8 +820,8 @@ Private Sub cmdLoadExcelColumns_Click()
         On Error GoTo ErrorHandler
     End If
     
-    AppendStatusMessage CStr(mExcelHeaders.Count) & " Excel columns loaded successfully."
-    SetGlobalStatus "Excel headers loaded"
+    AppendStatusMessage CStr(mSourceHeaders.Count) & " " & SourceName & " columns loaded successfully."
+    SetGlobalStatus SourceName & " headers loaded"
     
 SafeExit:
     Screen.MousePointer = vbDefault
@@ -983,8 +829,9 @@ SafeExit:
 
 ErrorHandler:
     Screen.MousePointer = vbDefault
-    AppendStatusMessage "Failed to load Excel headers: " & Err.Description
-    MsgBox "Failed to load Excel headers." & vbCrLf & Err.Number & " - " & Err.Description, vbCritical, APP_NAME
+    AppendStatusMessage "Failed to load " & SourceName & " headers: " & Err.Description
+    MsgBox "Failed to load " & SourceName & " headers." & vbCrLf & _
+           Err.Number & " - " & Err.Description, vbCritical, APP_NAME
 End Sub
 
 Private Sub cmdLoadSavedMapping_Click()
@@ -1102,7 +949,7 @@ Private Sub cmdStartImport_Click()
     Dim Options As clsImportOptions
     Dim Mappings As Collection
     Dim MissingRequired As String
-    Dim ExcelRows As Collection
+    Dim SourceRows As Collection
     Dim InsertedToStageCount As Long
     Dim StageTableName As String
     Dim FinalTotalRows As Long
@@ -1131,7 +978,7 @@ Private Sub cmdStartImport_Click()
         Exit Sub
     End If
     
-    If Not ValidateExcelSelectionInputs() Then Exit Sub
+    If Not ValidateImportSourceSelectionInputs() Then Exit Sub
     
     Set Mappings = CollectMappingsFromGrid()
     MissingRequired = mMappingManager.ValidateRequiredMappings(mTargetColumns, Mappings)
@@ -1164,22 +1011,21 @@ Private Sub cmdStartImport_Click()
         gAppContext.SelectedSchema, _
         gAppContext.SelectedTable, _
         Trim$(txtExcelFile.Text), _
-        GetExcelReadModeText(Options.ExcelReadMode)
+        GetImportReadModeText(Options)
     
     Screen.MousePointer = vbHourglass
     
-    lblCurrentStep.Caption = "Reading Excel rows..."
-    SetGlobalStatus "Reading Excel rows..."
-    AppendStatusMessage "Reading Excel rows from file..."
+    lblCurrentStep.Caption = "Reading " & GetImportSourceRowsText() & "..."
+    SetGlobalStatus "Reading " & GetImportSourceRowsText() & "..."
+    AppendStatusMessage "Reading " & GetImportSourceRowsText() & " from file..."
     DoEvents
     
     CheckForCancelRequest
     
-    mExcelReader.ReadMode = Options.ExcelReadMode
-    Set ExcelRows = mExcelReader.LoadRows(Trim$(txtExcelFile.Text), Me)
+    Set SourceRows = LoadSourceRows(Trim$(txtExcelFile.Text), Options)
     
-    AppendStatusMessage CStr(ExcelRows.Count) & " data rows loaded from Excel."
-    mImportLogger.WriteInfo CStr(ExcelRows.Count) & " data rows loaded from Excel."
+    AppendStatusMessage CStr(SourceRows.Count) & " data rows loaded from " & GetImportSourceDisplayName() & "."
+    mImportLogger.WriteInfo CStr(SourceRows.Count) & " data rows loaded from " & GetImportSourceDisplayName() & "."
     
     lblCurrentStep.Caption = "Creating staging table..."
     SetGlobalStatus "Creating staging table..."
@@ -1209,7 +1055,7 @@ Private Sub cmdStartImport_Click()
         Conn, _
         gAppContext.SelectedDatabase, _
         gAppContext.SelectedSchema, _
-        ExcelRows, _
+        SourceRows, _
         Mappings, _
         mTargetColumns, _
         Options, _
@@ -1221,7 +1067,6 @@ Private Sub cmdStartImport_Click()
     
     ' --------------------------------------------------
     ' Phase 2: Import from Stage to Target
-    ' IMPORTANT: use a NEW logger so counts belong only to target phase
     ' --------------------------------------------------
     lblCurrentStep.Caption = "Importing rows to target..."
     SetGlobalStatus "Importing rows to target..."
@@ -1234,7 +1079,7 @@ Private Sub cmdStartImport_Click()
         gAppContext.SelectedSchema, _
         gAppContext.SelectedTable, _
         Trim$(txtExcelFile.Text), _
-        GetExcelReadModeText(Options.ExcelReadMode)
+        GetImportReadModeText(Options)
     
     mImportLogger.WriteInfo "Target import phase started."
     mImportLogger.WriteInfo "Stage table: " & StageTableName
@@ -1415,6 +1260,8 @@ Private Sub InitializeForm()
     On Error GoTo ErrorHandler
     
     EnsureImportObjects
+    InitializeImportSourceTypes
+    UpdateImportSourceUi
     
     If gAppContext Is Nothing Then
         MsgBox "Application context is not initialized.", vbExclamation, APP_NAME
@@ -1451,14 +1298,22 @@ ErrorHandler:
     Unload Me
 End Sub
 
-'Private Sub InitializeAuthenticationCombo()
-'    cmbAuthentication.Clear
-'    cmbAuthentication.AddItem AUTH_WINDOWS
-'    cmbAuthentication.AddItem AUTH_SQL_SERVER
-'    cmbAuthentication.ListIndex = 0
-'
-'    UpdateAuthenticationControls
-'End Sub
+Private Sub InitializeImportSourceTypes()
+    cmbImportSourceType.Clear
+    
+    cmbImportSourceType.AddItem IMPORT_SOURCE_EXCEL
+    cmbImportSourceType.AddItem IMPORT_SOURCE_CSV
+    
+    cmbImportSourceType.ListIndex = 0
+End Sub
+
+Private Function GetSelectedImportSourceType() As String
+    If cmbImportSourceType.ListIndex < 0 Then
+        GetSelectedImportSourceType = IMPORT_SOURCE_EXCEL
+    Else
+        GetSelectedImportSourceType = Trim$(cmbImportSourceType.Text)
+    End If
+End Function
 
 Private Sub InitializeExcelReadOptions()
     optReadByAdo.Value = False
@@ -1511,8 +1366,6 @@ Private Sub InitializeCounters()
 End Sub
 
 Private Sub SetInitialControlState()
-    'FraConnection.Enabled = True
-    'fraDatabaseTable.Enabled = False
     fraExcel.Enabled = False
     
     grdMapping.Enabled = False
@@ -1525,50 +1378,18 @@ Private Sub SetInitialControlState()
     chkContinueOnTypeError.Enabled = False
     chkContinueOnDuplicate.Enabled = False
     chkAutoLoadSavedMapping.Enabled = False
-    chkRememberConnectionSettings.Enabled = True
     
     cmdStartImport.Enabled = False
     cmdExit.Enabled = True
     cmdCancelImport.Enabled = False
 
-    txtUserName.Enabled = False
-    txtPassword.Enabled = False
 End Sub
 
-'Private Sub cmbAuthentication_Click()
-'    On Error GoTo ErrorHandler
-'
-'    UpdateAuthenticationControls
-'    ResetAfterConnectionSettingsChange
-'
-'    AppendStatusMessage "Authentication mode changed. Database and table selections were cleared."
-'    Exit Sub
-'
-'ErrorHandler:
-'    MsgBox "Error changing authentication mode." & vbCrLf & _
-'           Err.Number & " - " & Err.Description, vbExclamation, APP_NAME
-'End Sub
-'
-'Private Sub UpdateAuthenticationControls()
-'    Dim IsSqlAuth As Boolean
-'
-'    IsSqlAuth = (cmbAuthentication.Text = AUTH_SQL_SERVER)
-'
-'    txtUserName.Enabled = IsSqlAuth
-'    txtPassword.Enabled = IsSqlAuth
-'
-'    If Not IsSqlAuth Then
-'        txtUserName.Text = ""
-'        txtPassword.Text = ""
-'    End If
-'End Sub
-'
 Private Sub cmdExit_Click()
     Unload Me
 End Sub
 
 Private Sub SetConnectedState()
-    'fraDatabaseTable.Enabled = True
     fraExcel.Enabled = False
     
     grdMapping.Enabled = False
@@ -1590,11 +1411,7 @@ Private Sub SetConnectedState()
 End Sub
 
 Private Sub SetDisconnectedState()
-    'fraDatabaseTable.Enabled = False
     fraExcel.Enabled = False
-    
-    'cmbDatabase.Clear
-    'cmbTable.Clear
     
     grdMapping.Enabled = False
     cmdAutoMatch.Enabled = False
@@ -1628,270 +1445,10 @@ Private Sub AppendStatusMessage(ByVal MessageText As String)
     SetGlobalStatus MessageText
 End Sub
 
-'Private Function ValidateConnectionInputs() As Boolean
-'    ValidateConnectionInputs = False
-'
-'    If IsNullOrEmpty(txtServerName.Text) Then
-'        MsgBox "Please enter server name.", vbExclamation, APP_NAME
-'        txtServerName.SetFocus
-'        Exit Function
-'    End If
-'
-'    If cmbAuthentication.ListIndex < 0 Then
-'        MsgBox "Please select authentication type.", vbExclamation, APP_NAME
-'        cmbAuthentication.SetFocus
-'        Exit Function
-'    End If
-'
-'    If cmbAuthentication.Text = AUTH_SQL_SERVER Then
-'        If IsNullOrEmpty(txtUserName.Text) Then
-'            MsgBox "Please enter user name.", vbExclamation, APP_NAME
-'            txtUserName.SetFocus
-'            Exit Function
-'        End If
-'
-'        If IsNullOrEmpty(txtPassword.Text) Then
-'            MsgBox "Please enter password.", vbExclamation, APP_NAME
-'            txtPassword.SetFocus
-'            Exit Function
-'        End If
-'    End If
-'
-'    ValidateConnectionInputs = True
-'End Function
-
-'Private Sub cmdConnect_Click()
-'    On Error GoTo ErrorHandler
-'
-'    Screen.MousePointer = vbHourglass
-'    SetGlobalStatus "Connecting to SQL Server..."
-'    AppendStatusMessage "Connecting to SQL Server..."
-'    DoEvents
-'
-'    If Not ValidateConnectionInputs() Then GoTo SafeExit
-'
-'    If mSqlConnection.OpenConnection( _
-'        Trim$(txtServerName.Text), _
-'        cmbAuthentication.Text, _
-'        Trim$(txtUserName.Text), _
-'        txtPassword.Text) Then
-'
-'        SetConnectedState
-'        LoadDatabases
-'
-'        If chkRememberConnectionSettings.Value = vbChecked Then
-'            SaveConnectionSettings
-'        Else
-'            ClearSavedConnectionSettings
-'        End If
-'
-'        MsgBox "Connection established successfully.", vbInformation, APP_NAME
-'    End If
-'
-'SafeExit:
-'    Screen.MousePointer = vbDefault
-'    Exit Sub
-'
-'ErrorHandler:
-'    Screen.MousePointer = vbDefault
-'
-'    ResetAfterConnectionSettingsChange
-'
-'    AppendStatusMessage "Connection failed: " & Err.Description
-'    MsgBox "Connection failed." & vbCrLf & _
-'           Err.Number & " - " & Err.Description, vbCritical, APP_NAME
-'End Sub
-
-'Private Sub Form_Unload(Cancel As Integer)
-'    On Error Resume Next
-'
-'    If Not mSqlConnection Is Nothing Then
-'        mSqlConnection.CloseConnection
-'    End If
-'
-'    Set mSqlConnection = Nothing
-'End Sub
-
 Private Sub SetGlobalStatus(ByVal StatusText As String)
     lblGlobalStatus.Caption = StatusText
     DoEvents
 End Sub
-
-'Private Sub LoadDatabases()
-'    On Error GoTo ErrorHandler
-'
-'    Dim Rs As ADODB.Recordset
-'    Dim DbName As String
-'
-'    cmbDatabase.Clear
-'    cmbTable.Clear
-'    txtSearchDatabase.Text = ""
-'    txtSearchTable.Text = ""
-'
-'    Set mAllDatabases = New Collection
-'    Set mAllTables = New Collection
-'
-'    SetGlobalStatus "Loading databases..."
-'    AppendStatusMessage "Loading user databases..."
-'    DoEvents
-'
-'    Set Rs = mDatabaseBrowser.GetUserDatabases(mSqlConnection.Connection)
-'
-'    Do While Not Rs.EOF
-'        DbName = NzString(Rs.Fields("name").Value)
-'        mAllDatabases.Add DbName
-'        cmbDatabase.AddItem DbName
-'        Rs.MoveNext
-'    Loop
-'
-'    Rs.Close
-'    Set Rs = Nothing
-'
-'    If cmbDatabase.ListCount > 0 Then
-'        cmbDatabase.ListIndex = 0
-'    End If
-'
-'    SetGlobalStatus "Databases loaded"
-'    AppendStatusMessage "Database list loaded successfully."
-'
-'    Exit Sub
-'
-'ErrorHandler:
-'    AppendStatusMessage "Failed to load databases: " & Err.Description
-'    MsgBox "Failed to load databases." & vbCrLf & Err.Number & " - " & Err.Description, vbCritical, APP_NAME
-'End Sub
-
-'Private Sub LoadTables()
-'    On Error GoTo ErrorHandler
-'
-'    Dim Rs As ADODB.Recordset
-'    Dim DisplayText As String
-'
-'    cmbTable.Clear
-'    txtSearchTable.Text = ""
-'    Set mAllTables = New Collection
-'
-'    If cmbDatabase.ListIndex < 0 Then
-'        MsgBox MSG_NO_DATABASE_SELECTED, vbExclamation, APP_NAME
-'        cmbDatabase.SetFocus
-'        Exit Sub
-'    End If
-'
-'    SetGlobalStatus "Loading tables..."
-'    AppendStatusMessage "Loading base tables for database: " & cmbDatabase.Text
-'    DoEvents
-'
-'    Set Rs = mDatabaseBrowser.GetBaseTables(mSqlConnection.Connection, cmbDatabase.Text)
-'
-'    Do While Not Rs.EOF
-'        DisplayText = NzString(Rs.Fields("TABLE_SCHEMA").Value) & "." & NzString(Rs.Fields("TABLE_NAME").Value)
-'        mAllTables.Add DisplayText
-'        cmbTable.AddItem DisplayText
-'        Rs.MoveNext
-'    Loop
-'
-'    Rs.Close
-'    Set Rs = Nothing
-'
-'    If cmbTable.ListCount > 0 Then
-'        cmbTable.ListIndex = 0
-'    End If
-'
-'    SetGlobalStatus "Tables loaded"
-'    AppendStatusMessage "Table list loaded successfully."
-'
-'    Exit Sub
-'
-'ErrorHandler:
-'    AppendStatusMessage "Failed to load tables: " & Err.Description
-'    MsgBox "Failed to load tables." & vbCrLf & Err.Number & " - " & Err.Description, vbCritical, APP_NAME
-'End Sub
-
-'Private Sub cmdLoadTables_Click()
-'    LoadTables
-'End Sub
-
-'Private Sub cmbDatabase_Click()
-'    cmbTable.Clear
-'    fraExcel.Enabled = False
-'
-'    ResetAfterTableSelectionChange
-'
-'    SetGlobalStatus "Database selected: " & cmbDatabase.Text
-'End Sub
-
-'Private Sub cmbTable_Click()
-'    On Error GoTo ErrorHandler
-'
-'    If cmbTable.ListIndex >= 0 Then
-'        ResetAfterTableSelectionChange
-'        fraExcel.Enabled = True
-'
-'        LoadTargetTableStructure
-'        mMappingManager.EnsureMappingTableExists mSqlConnection.Connection, cmbDatabase.Text
-'
-'        SetGlobalStatus "Table selected: " & cmbTable.Text
-'        AppendStatusMessage "Target table selected: " & cmbTable.Text
-'        AppendStatusMessage "Mapping table is ready."
-'    End If
-'
-'    Exit Sub
-'
-'ErrorHandler:
-'    AppendStatusMessage "Error preparing selected table: " & Err.Description
-'    MsgBox "Error preparing selected table." & vbCrLf & Err.Number & " - " & Err.Description, vbCritical, APP_NAME
-'End Sub
-
-'Private Function GetSelectedSchemaName() As String
-'    Dim FullName As String
-'    Dim DotPos As Long
-'
-'    FullName = Trim$(cmbTable.Text)
-'    DotPos = InStr(1, FullName, ".")
-'
-'    If DotPos > 0 Then
-'        GetSelectedSchemaName = Left$(FullName, DotPos - 1)
-'    Else
-'        GetSelectedSchemaName = "dbo"
-'    End If
-'End Function
-
-'Private Function GetSelectedTableName() As String
-'    Dim FullName As String
-'    Dim DotPos As Long
-'
-'    FullName = Trim$(cmbTable.Text)
-'    DotPos = InStr(1, FullName, ".")
-'
-'    If DotPos > 0 Then
-'        GetSelectedTableName = Mid$(FullName, DotPos + 1)
-'    Else
-'        GetSelectedTableName = FullName
-'    End If
-'End Function
-
-'Private Sub LoadTargetTableStructure()
-'    On Error GoTo ErrorHandler
-'
-'    SetGlobalStatus "Loading target table structure..."
-'    AppendStatusMessage "Loading table structure for: " & cmbTable.Text
-'    DoEvents
-'
-'    Set mTargetColumns = mDatabaseBrowser.GetTableColumns( _
-'        mSqlConnection.Connection, _
-'        cmbDatabase.Text, _
-'        GetSelectedSchemaName(), _
-'        GetSelectedTableName())
-'
-'    SetGlobalStatus "Target table structure loaded"
-'    AppendStatusMessage "Loaded " & CStr(mTargetColumns.Count) & " target columns."
-'
-'    Exit Sub
-'
-'ErrorHandler:
-'    AppendStatusMessage "Failed to load target table structure: " & Err.Description
-'    MsgBox "Failed to load target table structure." & vbCrLf & Err.Number & " - " & Err.Description, vbCritical, APP_NAME
-'End Sub
 
 Private Function GetSelectedExcelReadMode() As Integer
     If optReadByExcel.Value = True Then
@@ -1901,8 +1458,8 @@ Private Function GetSelectedExcelReadMode() As Integer
     End If
 End Function
 
-Private Function ValidateExcelSelectionInputs() As Boolean
-    ValidateExcelSelectionInputs = False
+Private Function ValidateImportSourceSelectionInputs() As Boolean
+    ValidateImportSourceSelectionInputs = False
     
     If gAppContext Is Nothing Then
         MsgBox "Application context is not initialized.", vbExclamation, APP_NAME
@@ -1936,13 +1493,18 @@ Private Function ValidateExcelSelectionInputs() As Boolean
         Exit Function
     End If
     
-    If Not IsExcelFileExtensionValid(txtExcelFile.Text) Then
-        MsgBox "Please select a valid Excel file (.xls or .xlsx).", vbExclamation, APP_NAME
+    If Not IsImportFileExtensionValid(txtExcelFile.Text) Then
+        If GetSelectedImportSourceType() = IMPORT_SOURCE_CSV Then
+            MsgBox "Please select a valid CSV file (.csv).", vbExclamation, APP_NAME
+        Else
+            MsgBox "Please select a valid Excel file (.xls or .xlsx).", vbExclamation, APP_NAME
+        End If
+        
         txtExcelFile.SetFocus
         Exit Function
     End If
     
-    ValidateExcelSelectionInputs = True
+    ValidateImportSourceSelectionInputs = True
 End Function
 
 Private Sub ResetMappingGridRows()
@@ -1966,20 +1528,20 @@ Private Sub ResetMappingGridRows()
     End With
 End Sub
 
-Private Sub PopulateMappingGridFromExcelHeaders()
+Private Sub PopulateMappingGridFromSourceHeaders()
     Dim i As Long
     Dim HeaderName As String
     
     ResetMappingGridRows
     
-    If mExcelHeaders Is Nothing Then Exit Sub
-    If mExcelHeaders.Count = 0 Then Exit Sub
+    If mSourceHeaders Is Nothing Then Exit Sub
+    If mSourceHeaders.Count = 0 Then Exit Sub
     
     With grdMapping
-        .Rows = mExcelHeaders.Count + 1
+        .Rows = mSourceHeaders.Count + 1
         
-        For i = 1 To mExcelHeaders.Count
-            HeaderName = NzString(mExcelHeaders(i))
+        For i = 1 To mSourceHeaders.Count
+            HeaderName = NzString(mSourceHeaders(i))
             
             .TextMatrix(i, 0) = HeaderName
             .TextMatrix(i, 1) = ""
@@ -1990,7 +1552,7 @@ Private Sub PopulateMappingGridFromExcelHeaders()
     End With
 End Sub
 
-Private Sub SetExcelHeadersLoadedState()
+Private Sub SetSourceHeadersLoadedState()
     grdMapping.Enabled = True
     
     cmdAutoMatch.Enabled = True
@@ -2129,14 +1691,6 @@ Private Sub ApplyMappingsToGrid(ByVal Mappings As Collection)
         Next j
     Next i
 End Sub
-
-'Private Sub grdMapping_Click()
-'    ShowGridSqlColumnsComboIfNeeded
-'End Sub
-
-'Private Sub grdMapping_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
-'    ShowGridSqlColumnsComboIfNeeded
-'End Sub
 
 Private Sub grdMapping_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)
     ShowGridSqlColumnsComboIfNeeded
@@ -2313,8 +1867,6 @@ Private Sub ResetExecutionProgress()
 End Sub
 
 Private Sub SetImportUiBusyState(ByVal IsBusy As Boolean)
-    'FraConnection.Enabled = Not IsBusy
-    'fraDatabaseTable.Enabled = Not IsBusy
     fraExcel.Enabled = Not IsBusy
     
     grdMapping.Enabled = Not IsBusy
@@ -2356,34 +1908,6 @@ Private Sub SetExecutionSummary( _
     prgImport.Value = PROGRESS_MAX
 End Sub
 
-'Private Sub ResetAfterTableSelectionChange()
-'    txtExcelFile.Text = ""
-'
-'    Set mExcelHeaders = New Collection
-'    ResetMappingGridRows
-'
-'    grdMapping.Enabled = False
-'    cmdAutoMatch.Enabled = False
-'    cmdLoadSavedMapping.Enabled = False
-'    cmdSaveMapping.Enabled = False
-'    cmdValidateMapping.Enabled = False
-'
-'    chkDeleteExisting.Value = vbUnchecked
-'    chkContinueOnTypeError.Value = vbUnchecked
-'    chkContinueOnDuplicate.Value = vbUnchecked
-'
-'    chkDeleteExisting.Enabled = False
-'    chkContinueOnTypeError.Enabled = False
-'    chkContinueOnDuplicate.Enabled = False
-'    chkAutoLoadSavedMapping.Enabled = False
-'
-'    cmdStartImport.Enabled = False
-'    cmbGridSqlColumns.Visible = False
-'
-'    ResetExecutionProgress
-'    ResetPreviewGrid
-'End Sub
-
 Private Function ContainsText(ByVal SourceText As String, ByVal SearchText As String) As Boolean
     If Len(Trim$(SearchText)) = 0 Then
         ContainsText = True
@@ -2391,124 +1915,6 @@ Private Function ContainsText(ByVal SourceText As String, ByVal SearchText As St
         ContainsText = (InStr(1, SourceText, SearchText, vbTextCompare) > 0)
     End If
 End Function
-
-'Private Sub FilterDatabases()
-'    Dim i As Long
-'    Dim DbName As String
-'    Dim SearchText As String
-'
-'    SearchText = Trim$(txtSearchDatabase.Text)
-'
-'    cmbDatabase.Clear
-'
-'    For i = 1 To mAllDatabases.Count
-'        DbName = CStr(mAllDatabases(i))
-'
-'        If ContainsText(DbName, SearchText) Then
-'            cmbDatabase.AddItem DbName
-'        End If
-'    Next i
-'
-'    If cmbDatabase.ListCount > 0 Then
-'        cmbDatabase.ListIndex = 0
-'    End If
-'End Sub
-
-'Private Sub txtSearchDatabase_Change()
-'    If fraDatabaseTable.Enabled Then
-'        FilterDatabases
-'    End If
-'End Sub
-
-'Private Sub FilterTables()
-'    Dim i As Long
-'    Dim TableName As String
-'    Dim SearchText As String
-'
-'    SearchText = Trim$(txtSearchTable.Text)
-'
-'    cmbTable.Clear
-'
-'    For i = 1 To mAllTables.Count
-'        TableName = CStr(mAllTables(i))
-'
-'        If ContainsText(TableName, SearchText) Then
-'            cmbTable.AddItem TableName
-'        End If
-'    Next i
-'
-'    If cmbTable.ListCount > 0 Then
-'        cmbTable.ListIndex = 0
-'    End If
-'End Sub
-
-'Private Sub txtSearchTable_Change()
-'    If fraDatabaseTable.Enabled Then
-'        FilterTables
-'    End If
-'End Sub
-
-'Private Sub ResetAfterConnectionSettingsChange()
-'    On Error Resume Next
-'
-'    If Not mSqlConnection Is Nothing Then
-'        mSqlConnection.CloseConnection
-'    End If
-'
-'    cmbDatabase.Clear
-'    cmbTable.Clear
-'
-'    txtSearchDatabase.Text = ""
-'    txtSearchTable.Text = ""
-'
-'    Set mAllDatabases = New Collection
-'    Set mAllTables = New Collection
-'    Set mTargetColumns = New Collection
-'    Set mExcelHeaders = New Collection
-'
-'    txtExcelFile.Text = ""
-'
-'    ResetMappingGridRows
-'    ResetExecutionProgress
-'
-'    fraDatabaseTable.Enabled = False
-'    fraExcel.Enabled = False
-'
-'    grdMapping.Enabled = False
-'    cmbGridSqlColumns.Visible = False
-'
-'    cmdAutoMatch.Enabled = False
-'    cmdLoadSavedMapping.Enabled = False
-'    cmdSaveMapping.Enabled = False
-'    cmdValidateMapping.Enabled = False
-'    cmdStartImport.Enabled = False
-'
-'    chkDeleteExisting.Value = vbUnchecked
-'    chkContinueOnTypeError.Value = vbUnchecked
-'    chkContinueOnDuplicate.Value = vbUnchecked
-'
-'    chkDeleteExisting.Enabled = False
-'    chkContinueOnTypeError.Enabled = False
-'    chkContinueOnDuplicate.Enabled = False
-'    chkAutoLoadSavedMapping.Enabled = False
-'
-'    lblCurrentStep.Caption = "Ready"
-'    SetGlobalStatus "Not connected"
-'End Sub
-
-'Private Sub txtServerName_Change()
-'    If fraDatabaseTable.Enabled Or fraExcel.Enabled Then
-'        ResetAfterConnectionSettingsChange
-'        AppendStatusMessage "Server name changed. Database and table selections were cleared."
-'    End If
-'End Sub
-
-'Private Sub txtServerName_LostFocus()
-'    If fraDatabaseTable.Enabled Then
-'        ResetAfterConnectionSettingsChange
-'        AppendStatusMessage "Server name changed. Database and table selections were cleared."
-'    End If
-'End Sub
 
 Private Sub InitializePreviewGrid()
     With grdExcelPreview
@@ -2533,84 +1939,6 @@ Private Sub ResetPreviewGrid()
         .TextMatrix(0, 0) = "Preview"
         .TextMatrix(1, 0) = ""
     End With
-End Sub
-
-Private Sub LoadExcelPreview()
-    On Error GoTo ErrorHandler
-    
-    Dim PreviewRows As Collection
-    Dim RowData As Object
-    Dim PreviewRowCount As Long
-    Dim PreviewColCount As Long
-    Dim r As Long
-    Dim c As Long
-    Dim HeaderName As String
-    Dim CellValue As String
-    
-    SetGlobalStatus "Loading Excel preview..."
-    AppendStatusMessage "Loading Excel preview..."
-    DoEvents
-    
-    mExcelReader.ReadMode = GetSelectedExcelReadMode()
-    Set PreviewRows = mExcelReader.LoadRows(Trim$(txtExcelFile.Text), Nothing, 5)
-    
-    If mExcelHeaders Is Nothing Then Exit Sub
-    If mExcelHeaders.Count = 0 Then Exit Sub
-    
-    PreviewColCount = mExcelHeaders.Count
-    
-    If PreviewRows.Count >= 5 Then
-        PreviewRowCount = 5
-    Else
-        PreviewRowCount = PreviewRows.Count
-    End If
-    
-    With grdExcelPreview
-        .Rows = IIf(PreviewRowCount = 0, 2, PreviewRowCount + 1)
-        .Cols = IIf(PreviewColCount = 0, 1, PreviewColCount)
-        .FixedRows = 1
-        .FixedCols = 0
-        
-        For c = 1 To mExcelHeaders.Count
-            .TextMatrix(0, c - 1) = CStr(mExcelHeaders(c))
-        Next c
-        
-        If PreviewRowCount = 0 Then
-            If .Cols > 0 Then
-                .TextMatrix(1, 0) = ""
-            End If
-        Else
-            For r = 1 To PreviewRowCount
-                Set RowData = PreviewRows(r)
-                
-                For c = 1 To mExcelHeaders.Count
-                    HeaderName = CStr(mExcelHeaders(c))
-                    
-                    If RowData.Exists(HeaderName) Then
-                        If IsNull(RowData(HeaderName)) Or IsEmpty(RowData(HeaderName)) Then
-                            CellValue = ""
-                        Else
-                            CellValue = CStr(RowData(HeaderName))
-                        End If
-                    Else
-                        CellValue = ""
-                    End If
-                    
-                    .TextMatrix(r, c - 1) = CellValue
-                Next c
-            Next r
-        End If
-    End With
-    
-    AdjustPreviewGridColumnWidths
-    
-    AppendStatusMessage CStr(PreviewRowCount) & " preview rows loaded."
-    SetGlobalStatus "Excel preview loaded"
-    Exit Sub
-
-ErrorHandler:
-    AppendStatusMessage "Failed to load Excel preview: " & Err.Description
-    MsgBox "Failed to load Excel preview." & vbCrLf & Err.Description, vbExclamation, APP_NAME
 End Sub
 
 Private Sub AdjustPreviewGridColumnWidths()
@@ -2722,95 +2050,6 @@ Private Function GetSettingsFilePath() As String
     GetSettingsFilePath = GetSettingsFilePath & SETTINGS_FILE_NAME
 End Function
 
-'Private Sub SaveConnectionSettings()
-'    Dim SettingsFilePath As String
-'
-'    SettingsFilePath = GetSettingsFilePath()
-'
-'    WriteIniValue SETTINGS_SECTION_CONNECTION, "RememberSettings", IIf(chkRememberConnectionSettings.Value = vbChecked, "1", "0"), SettingsFilePath
-'    WriteIniValue SETTINGS_SECTION_CONNECTION, "ServerName", Trim$(txtServerName.Text), SettingsFilePath
-'    WriteIniValue SETTINGS_SECTION_CONNECTION, "AuthenticationType", Trim$(cmbAuthentication.Text), SettingsFilePath
-'    WriteIniValue SETTINGS_SECTION_CONNECTION, "UserName", Trim$(txtUserName.Text), SettingsFilePath
-'    WriteIniValue SETTINGS_SECTION_CONNECTION, "ExcelReadMode", CStr(GetSelectedExcelReadMode()), SettingsFilePath
-'End Sub
-'
-'Private Sub ClearSavedConnectionSettings()
-'    Dim SettingsFilePath As String
-'
-'    SettingsFilePath = GetSettingsFilePath()
-'
-'    DeleteIniKey SETTINGS_SECTION_CONNECTION, "RememberSettings", SettingsFilePath
-'    DeleteIniKey SETTINGS_SECTION_CONNECTION, "ServerName", SettingsFilePath
-'    DeleteIniKey SETTINGS_SECTION_CONNECTION, "AuthenticationType", SettingsFilePath
-'    DeleteIniKey SETTINGS_SECTION_CONNECTION, "UserName", SettingsFilePath
-'    DeleteIniKey SETTINGS_SECTION_CONNECTION, "ExcelReadMode", SettingsFilePath
-'End Sub
-
-'Private Sub LoadConnectionSettings()
-'    On Error GoTo ErrorHandler
-'
-'    Dim SettingsFilePath As String
-'    Dim RememberValue As String
-'    Dim ServerName As String
-'    Dim AuthenticationType As String
-'    Dim UserName As String
-'    Dim ExcelReadModeText As String
-'
-'    SettingsFilePath = GetSettingsFilePath()
-'
-'    RememberValue = ReadIniValue(SETTINGS_SECTION_CONNECTION, "RememberSettings", "0", SettingsFilePath)
-'
-'    If RememberValue <> "1" Then Exit Sub
-'
-'    chkRememberConnectionSettings.Value = vbChecked
-'
-'    ServerName = ReadIniValue(SETTINGS_SECTION_CONNECTION, "ServerName", "", SettingsFilePath)
-'    AuthenticationType = ReadIniValue(SETTINGS_SECTION_CONNECTION, "AuthenticationType", AUTH_WINDOWS, SettingsFilePath)
-'    UserName = ReadIniValue(SETTINGS_SECTION_CONNECTION, "UserName", "", SettingsFilePath)
-'    ExcelReadModeText = ReadIniValue(SETTINGS_SECTION_CONNECTION, "ExcelReadMode", CStr(EXCEL_READ_MODE_ADO), SettingsFilePath)
-'
-'    txtServerName.Text = ServerName
-'
-'    If StrComp(AuthenticationType, AUTH_SQL_SERVER, vbTextCompare) = 0 Then
-'        cmbAuthentication.ListIndex = 1
-'    Else
-'        cmbAuthentication.ListIndex = 0
-'    End If
-'
-'    UpdateAuthenticationControls
-'
-'    txtUserName.Text = UserName
-'    txtPassword.Text = ""
-'
-'    If Val(ExcelReadModeText) = EXCEL_READ_MODE_AUTOMATION Then
-'        optReadByExcel.Value = True
-'        optReadByAdo.Value = False
-'    Else
-'        optReadByAdo.Value = True
-'        optReadByExcel.Value = False
-'    End If
-'
-'    Exit Sub
-'
-'ErrorHandler:
-'    chkRememberConnectionSettings.Value = vbUnchecked
-'End Sub
-
-'Private Sub chkRememberConnectionSettings_Click()
-'    If chkRememberConnectionSettings.Value = vbUnchecked Then
-'        ClearSavedConnectionSettings
-'        AppendStatusMessage "Saved connection settings were cleared."
-'    End If
-'End Sub
-
-'Private Sub ApplyAppContextToImportForm()
-'    EnsureImportObjects
-'
-'    lblConnectionInfo.Caption = gAppContext.ServerName
-'    lblDatabaseInfo.Caption = gAppContext.SelectedDatabase
-'    lblTableInfo.Caption = gAppContext.GetFullTargetName()
-'End Sub
-
 Private Function GetActiveConnection() As ADODB.Connection
     On Error GoTo ErrorHandler
     
@@ -2878,5 +2117,184 @@ Private Sub EnsureImportObjects()
     If mImportEngine Is Nothing Then Set mImportEngine = New clsImportEngine
     If mDatabaseBrowser Is Nothing Then Set mDatabaseBrowser = New clsDatabaseBrowser
     If mTargetColumns Is Nothing Then Set mTargetColumns = New Collection
-    If mExcelHeaders Is Nothing Then Set mExcelHeaders = New Collection
+    If mSourceHeaders Is Nothing Then Set mSourceHeaders = New Collection
+    If mCsvReader Is Nothing Then Set mCsvReader = New clsCsvReader
 End Sub
+
+Private Function IsImportFileExtensionValid(ByVal FilePath As String) As Boolean
+    Dim SourceType As String
+    Dim Ext As String
+    
+    SourceType = GetSelectedImportSourceType()
+    Ext = LCase$(Mid$(FilePath, InStrRev(FilePath, ".") + 1))
+    
+    Select Case SourceType
+        Case IMPORT_SOURCE_EXCEL
+            IsImportFileExtensionValid = (Ext = "xls" Or Ext = "xlsx")
+        
+        Case IMPORT_SOURCE_CSV
+            IsImportFileExtensionValid = (Ext = "csv")
+        
+        Case Else
+            IsImportFileExtensionValid = False
+    End Select
+End Function
+
+Private Sub ResetSourceFileState()
+    txtExcelFile.Text = ""
+    
+    Set mSourceHeaders = New Collection
+    
+    ResetPreviewGrid
+    ResetMappingGridRows
+    
+    cmdValidateMapping.Enabled = False
+    cmdStartImport.Enabled = False
+    
+    SetGlobalStatus "Ready"
+    AppendStatusMessage "Import source type changed. Please select a source file."
+End Sub
+
+Private Sub UpdateImportSourceUi()
+    Dim SourceType As String
+    
+    SourceType = GetSelectedImportSourceType()
+    
+    If SourceType = IMPORT_SOURCE_CSV Then
+        lblExcelFile.Caption = "CSV File:"
+        cmdBrowseExcel.Caption = "Browse CSV..."
+        cmdLoadExcelColumns.Caption = "Load CSV Columns"
+    Else
+        lblExcelFile.Caption = "Excel File:"
+        cmdBrowseExcel.Caption = "Browse Excel..."
+        cmdLoadExcelColumns.Caption = "Load Excel Columns"
+    End If
+End Sub
+
+Private Function LoadSourceHeaders(ByVal FilePath As String) As Collection
+    If GetSelectedImportSourceType() = IMPORT_SOURCE_CSV Then
+        Set LoadSourceHeaders = mCsvReader.LoadHeaders(FilePath)
+    Else
+        mExcelReader.ReadMode = GetSelectedExcelReadMode()
+        Set LoadSourceHeaders = mExcelReader.LoadHeaders(FilePath)
+    End If
+End Function
+
+Private Function GetImportSourceDisplayName() As String
+    If GetSelectedImportSourceType() = IMPORT_SOURCE_CSV Then
+        GetImportSourceDisplayName = "CSV"
+    Else
+        GetImportSourceDisplayName = "Excel"
+    End If
+End Function
+
+Private Sub LoadSourcePreview()
+    On Error GoTo ErrorHandler
+    
+    Dim PreviewRows As Collection
+    Dim RowData As Object
+    Dim PreviewRowCount As Long
+    Dim PreviewColCount As Long
+    Dim r As Long
+    Dim c As Long
+    Dim HeaderName As String
+    Dim CellValue As String
+    Dim SourceName As String
+    
+    SourceName = GetImportSourceDisplayName()
+    
+    SetGlobalStatus "Loading " & SourceName & " preview..."
+    AppendStatusMessage "Loading " & SourceName & " preview..."
+    DoEvents
+    
+    If GetSelectedImportSourceType() = IMPORT_SOURCE_CSV Then
+        Set PreviewRows = mCsvReader.LoadPreviewRows(Trim$(txtExcelFile.Text), 5)
+    Else
+        mExcelReader.ReadMode = GetSelectedExcelReadMode()
+        Set PreviewRows = mExcelReader.LoadRows(Trim$(txtExcelFile.Text), Nothing, 5)
+    End If
+    
+    If mSourceHeaders Is Nothing Then Exit Sub
+    If mSourceHeaders.Count = 0 Then Exit Sub
+    
+    PreviewColCount = mSourceHeaders.Count
+    
+    If PreviewRows.Count >= 5 Then
+        PreviewRowCount = 5
+    Else
+        PreviewRowCount = PreviewRows.Count
+    End If
+    
+    With grdExcelPreview
+        .Rows = IIf(PreviewRowCount = 0, 2, PreviewRowCount + 1)
+        .Cols = IIf(PreviewColCount = 0, 1, PreviewColCount)
+        .FixedRows = 1
+        .FixedCols = 0
+        
+        For c = 1 To mSourceHeaders.Count
+            .TextMatrix(0, c - 1) = CStr(mSourceHeaders(c))
+        Next c
+        
+        If PreviewRowCount = 0 Then
+            If .Cols > 0 Then
+                .TextMatrix(1, 0) = ""
+            End If
+        Else
+            For r = 1 To PreviewRowCount
+                Set RowData = PreviewRows(r)
+                
+                For c = 1 To mSourceHeaders.Count
+                    HeaderName = CStr(mSourceHeaders(c))
+                    
+                    If RowData.Exists(HeaderName) Then
+                        If IsNull(RowData(HeaderName)) Or IsEmpty(RowData(HeaderName)) Then
+                            CellValue = ""
+                        Else
+                            CellValue = CStr(RowData(HeaderName))
+                        End If
+                    Else
+                        CellValue = ""
+                    End If
+                    
+                    .TextMatrix(r, c - 1) = CellValue
+                Next c
+            Next r
+        End If
+    End With
+    
+    AdjustPreviewGridColumnWidths
+    
+    AppendStatusMessage CStr(PreviewRowCount) & " preview rows loaded."
+    SetGlobalStatus SourceName & " preview loaded"
+    Exit Sub
+
+ErrorHandler:
+    AppendStatusMessage "Failed to load " & SourceName & " preview: " & Err.Description
+    MsgBox "Failed to load " & SourceName & " preview." & vbCrLf & _
+           Err.Description, vbExclamation, APP_NAME
+End Sub
+
+Private Function LoadSourceRows(ByVal FilePath As String, ByVal Options As clsImportOptions) As Collection
+    If GetSelectedImportSourceType() = IMPORT_SOURCE_CSV Then
+        Set LoadSourceRows = mCsvReader.LoadRows(FilePath, Me)
+    Else
+        mExcelReader.ReadMode = Options.ExcelReadMode
+        Set LoadSourceRows = mExcelReader.LoadRows(FilePath, Me)
+    End If
+End Function
+
+Private Function GetImportSourceRowsText() As String
+    If GetSelectedImportSourceType() = IMPORT_SOURCE_CSV Then
+        GetImportSourceRowsText = "CSV rows"
+    Else
+        GetImportSourceRowsText = "Excel rows"
+    End If
+End Function
+
+Private Function GetImportReadModeText(ByVal Options As clsImportOptions) As String
+    If GetSelectedImportSourceType() = IMPORT_SOURCE_CSV Then
+        GetImportReadModeText = "CSV"
+    Else
+        GetImportReadModeText = GetExcelReadModeText(Options.ExcelReadMode)
+    End If
+End Function

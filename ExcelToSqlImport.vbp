@@ -29,6 +29,7 @@ Class=clsAppContext; Classes\clsAppContext.cls
 Module=modAppGlobals; Modules\modAppGlobals.bas
 Form=Forms\frmExportSqlToExcel.frm
 Class=clsExportTableSelection; Classes\clsExportTableSelection.cls
+Class=clsCsvReader; Classes\clsCsvReader.cls
 IconForm="frmImportExcelToSql"
 Startup="Sub Main"
 HelpFile=""

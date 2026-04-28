@@ -1,6 +1,32 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+## [1.3.0] - 2026-04-28
+
+### Added
+
+- Added CSV import support.
+- Added import source type selection for Excel or CSV.
+- Added CSV file browsing with `.csv` file filter.
+- Added CSV header loading.
+- Added CSV preview loading.
+- Added CSV row import using the existing mapping, validation, staging, and final import pipeline.
+- Added CSV-aware import logging.
+
+### Changed
+
+- Generalized import source handling so the Import form can process both Excel and CSV files.
+- Renamed internal import variables and methods from Excel-specific names to source-based names where appropriate.
+- Updated import UI captions based on the selected source type.
+- Improved import validation to check file extensions based on the selected source type.
+
+### Fixed
+
+- Removed obsolete Excel-only preview and validation paths after adding shared source handling.
+
+### Notes
+
+- CSV import uses the same mapping, validation, staging, transaction, logging, progress, and cancel workflow as Excel import.
+- CSV files are expected to use the first row as headers.
 
 ## [1.2.0] - 2026-04-27
 
